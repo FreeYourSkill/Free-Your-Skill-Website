@@ -173,6 +173,11 @@ body[data-route="home"] .header { display: none; }
   mix-blend-mode: screen;
   margin-bottom: 0.5rem;
 }
+/* trnmnt logo has ~1.5x more empty margin in its canvas than agency_3 —
+   scale it up so both read at the same visual size (overflow clipped by card). */
+.intro.view--active .intro__card[href="#/tournament"] .intro__card-logo {
+  transform: scale(1.5);
+}
 .intro.view--active .intro__card-label {
   font-family: var(--font-heading);
   font-size: 0.78rem;
