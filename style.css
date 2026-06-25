@@ -173,11 +173,7 @@ body[data-route="home"] .header { display: none; }
   mix-blend-mode: screen;
   margin-bottom: 0.5rem;
 }
-/* trnmnt logo has ~1.5x more empty margin in its canvas than agency_3 —
-   scale it up so both read at the same visual size (overflow clipped by card). */
-.intro.view--active .intro__card[href="#/tournament"] .intro__card-logo {
-  transform: scale(1.5);
-}
+/* Logos pre-trimmed to equal content fill — no per-logo scaling needed. */
 .intro.view--active .intro__card-label {
   font-family: var(--font-heading);
   font-size: 0.78rem;
@@ -375,10 +371,11 @@ body[data-route="home"] .header { display: none; }
   justify-content: space-between;
 }
 .header__logo img {
-  height: 36px;
+  height: 50px;
   width: auto;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s, height 0.4s;
 }
+.header.scrolled .header__logo img { height: 42px; }
 .header__logo:hover img { opacity: 0.8; }
 
 .header__nav {
@@ -1327,7 +1324,7 @@ body[data-route="home"] .header { display: none; }
   margin-bottom: 3rem;
 }
 .footer__logo {
-  height: 40px;
+  height: 64px;
   width: auto;
   margin-bottom: 1rem;
 }
