@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Your Skill</title>
+  <meta name="description" content="Free Your Skill — Agentur für kreative Verbindungen aus Hannover. Eventplanung, Vermittlung & Projekt-Support.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-route="home">
+
+  <!-- ============================================ -->
+  <!-- SHARED HEADER (hidden on home view) -->
+  <!-- ============================================ -->
+  <header id="header" class="header">
+    <div class="header__inner">
+      <a href="#/" class="header__logo" data-link>
+        <img src="assets/logos_all/LOGO_FYS AGENCY_TRANSPARENT_PNG/fys-agency-logo-klein.png" alt="FYS Agency">
+      </a>
+      <nav class="header__nav">
+        <a href="#/about" class="header__link" data-link>About</a>
+        <a href="#/agency/leistungen" class="header__link" data-link>Leistungen</a>
+        <a href="#/agency/faq" class="header__link" data-link>FAQ</a>
+        <a href="#/tournament" class="header__link" data-link>Turnier</a>
+      </nav>
+      <div class="header__actions">
+        <div class="header__social">
+          <a href="https://instagram.com/freeyourskill_agency" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://tiktok.com/@FreeYourSkill" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.52a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.66a8.21 8.21 0 004.76 1.52v-3.4a4.85 4.85 0 01-1-.09z"/></svg>
+          </a>
+        </div>
+        <a href="#/agency/kontakt" class="header__cta" data-link>Kontakt</a>
+      </div>
+      <button class="header__burger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV OVERLAY -->
+  <div class="mobile-nav" id="mobileNav">
+    <nav class="mobile-nav__links">
+      <a href="#/about" data-link>About</a>
+      <a href="#/agency/leistungen" data-link>Leistungen</a>
+      <a href="#/agency/faq" data-link>FAQ</a>
+      <a href="#/tournament" data-link>Turnier</a>
+      <a href="#/agency/kontakt" class="mobile-nav__cta" data-link>Kontakt</a>
+    </nav>
+  </div>
+
+  <main id="app">
+
+    <!-- ============================================ -->
+    <!-- VIEW: HOME / INTRO SPLASH -->
+    <!-- ============================================ -->
+    <section class="view intro" data-view="home">
+      <div class="intro__overlay"></div>
+      <div class="intro__content">
+        <div class="intro__logo-main">
+          <img src="assets/logos_all/Schrift_weiss_original_5.png" alt="Free Your Skill" class="intro__logo-img">
+        </div>
+        <h1 class="intro__title">EACH ONE TEACH ONE</h1>
+        <p class="intro__tagline">VERBINDEN &mdash; PLANEN &mdash; SUPPORTEN</p>
+        <div class="intro__split">
+          <a href="#/agency" class="intro__card intro__card--logo" data-link>
+            <div class="intro__card-content">
+              <img src="assets/logos_all/agency_3.png" alt="FYS Agency" class="intro__card-logo">
+              <span class="intro__card-label">Agency</span>
+            </div>
+          </a>
+          <a href="#/tournament" class="intro__card intro__card--logo" data-link>
+            <div class="intro__card-content">
+              <img src="assets/logos_all/trnmnt_15.png" alt="FYS Tournament" class="intro__card-logo">
+              <span class="intro__card-label">Tournament</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <footer class="footer--minimal">
+        <div class="footer--minimal__links">
+          <a href="#/impressum" data-link>Impressum</a>
+          <a href="#/datenschutz" data-link>Datenschutz</a>
+        </div>
+        <div class="footer--minimal__social">
+          <a href="https://instagram.com/freeyourskill_agency" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://tiktok.com/@FreeYourSkill" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.52a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.66a8.21 8.21 0 004.76 1.52v-3.4a4.85 4.85 0 01-1-.09z"/></svg>
+          </a>
+          <a href="https://twitch.tv/CallMeMullai" target="_blank" rel="noopener" aria-label="Twitch">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg>
+          </a>
+          <a href="https://youtube.com/@freeyourskill" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+      </footer>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- VIEW: AGENCY -->
+    <!-- ============================================ -->
+    <section class="view view--page" data-view="agency">
+
+      <!-- HERO -->
+      <section id="startseite" class="hero">
+        <div class="hero__video-wrap">
+          <img src="assets/bilder/DSC_0363.jpg" alt="Free Your Skill Agency" class="hero__video">
+          <div class="hero__video-overlay"></div>
+        </div>
+        <div class="hero__content" data-reveal>
+          <h1 class="hero__title">
+            <span class="hero__title-line">EACH ONE</span>
+            <span class="hero__title-line hero__title-line--accent">TEACH ONE</span>
+          </h1>
+          <p class="hero__sub">Kreative Verbindungen. Klare Kommunikation. Verlässliche Umsetzung.</p>
+          <a href="#/agency/kontakt" class="btn btn--primary" data-link>Jetzt anfragen</a>
+        </div>
+      </section>
+
+      <!-- WAS MACHT FYS -->
+      <section id="leistungen" class="section section--dark">
+        <div class="container">
+          <div class="split-text" data-reveal>
+            <div class="split-text__left">
+              <h2 class="section__title">Was macht<br><span class="accent-pink">Free Your Skill</span>?</h2>
+            </div>
+            <div class="split-text__right">
+              <p class="lead">Eine Agentur für kreative Verbindungen, mit klarer Kommunikation und verlässlicher Umsetzung. Wir bringen Talente, Auftraggebende und Projekte zusammen &ndash; fair, professionell &amp; auf Augenhöhe.</p>
+            </div>
+          </div>
+
+          <div class="usps" data-reveal>
+            <div class="usp">
+              <div class="usp__icon">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="4" y="6" width="40" height="36" rx="4"/>
+                  <path d="M4 16h40M16 16v26M32 16v26"/>
+                  <circle cx="10" cy="11" r="1.5" fill="currentColor"/>
+                  <circle cx="15" cy="11" r="1.5" fill="currentColor"/>
+                </svg>
+              </div>
+              <h3 class="usp__title">Eventplanung</h3>
+              <p class="usp__text">Von Konzept bis Durchführung &ndash; live &amp; digital. Wir planen und realisieren Events, die wirken.</p>
+            </div>
+            <div class="usp">
+              <div class="usp__icon">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="16" cy="16" r="6"/>
+                  <circle cx="32" cy="16" r="6"/>
+                  <circle cx="24" cy="32" r="6"/>
+                  <path d="M20 20l4 6M28 20l-4 6"/>
+                </svg>
+              </div>
+              <h3 class="usp__title">Vermittlung</h3>
+              <p class="usp__text">Wir verbinden Talente mit Auftraggebenden. Passend, fair und auf Augenhöhe.</p>
+            </div>
+            <div class="usp">
+              <div class="usp__icon">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M8 38V18l16-10 16 10v20"/>
+                  <path d="M18 38V26h12v12"/>
+                  <path d="M2 38h44"/>
+                </svg>
+              </div>
+              <h3 class="usp__title">Projekt-Support</h3>
+              <p class="usp__text">Beratung, Content-Produktion, Livestreaming &ndash; wir begleiten dein Projekt von A bis Z.</p>
+            </div>
+          </div>
+
+          <div class="cta-row" data-reveal>
+            <a href="#/about" class="btn btn--outline" data-link>Über uns erfahren</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- DIVIDER -->
+      <section class="parallax-divider">
+        <img src="assets/bilder/DSC_0356.jpg" alt="Event atmosphere" class="parallax-divider__img">
+        <div class="parallax-divider__overlay"></div>
+      </section>
+
+      <!-- VORTEILE -->
+      <section id="vorteile" class="section section--split-bg">
+        <div class="container">
+          <h2 class="section__title section__title--center" data-reveal>Vorteile der <span class="accent-teal">Zusammenarbeit</span></h2>
+          <div class="vorteile-grid" data-reveal>
+            <div class="vorteile-card vorteile-card--pink">
+              <h3>Als Unternehmen</h3>
+              <ul>
+                <li>Zugang zu einem kuratierten Talent-Netzwerk</li>
+                <li>Zuverlässige Planung &amp; Durchführung</li>
+                <li>Ein Ansprechpartner für alles</li>
+                <li>Transparente Preise, keine versteckten Kosten</li>
+                <li>Content-Produktion aus einer Hand</li>
+              </ul>
+              <a href="#/agency/kontakt" class="btn btn--small" data-link>Als Unternehmen anfragen</a>
+            </div>
+            <div class="vorteile-card vorteile-card--teal">
+              <h3>Als Künstler</h3>
+              <ul>
+                <li>Faire Vermittlung &amp; transparente Konditionen</li>
+                <li>Zugang zu spannenden Projekten &amp; Events</li>
+                <li>Persönliche Betreuung &amp; ehrliche Kommunikation</li>
+                <li>Unterstützung bei Selbstvermarktung</li>
+                <li>Community &amp; Netzwerk</li>
+              </ul>
+              <a href="#/agency/kontakt" class="btn btn--small" data-link>Als Künstler bewerben</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROZESS -->
+      <section id="prozess" class="section section--dark">
+        <div class="container">
+          <div class="split-text" data-reveal>
+            <div class="split-text__left">
+              <h2 class="section__title">Wie läuft<br><span class="accent-pink">es ab</span>?</h2>
+            </div>
+            <div class="split-text__right">
+              <div class="prozess-steps">
+                <div class="prozess-step">
+                  <div class="prozess-step__num">01</div>
+                  <div class="prozess-step__content">
+                    <h4>Verstehen</h4>
+                    <p>Kostenloses Erstgespräch &ndash; wir hören zu und verstehen dein Projekt.</p>
+                  </div>
+                </div>
+                <div class="prozess-step">
+                  <div class="prozess-step__num">02</div>
+                  <div class="prozess-step__content">
+                    <h4>Planen</h4>
+                    <p>Wir entwickeln ein individuelles Konzept mit klaren Schritten.</p>
+                  </div>
+                </div>
+                <div class="prozess-step">
+                  <div class="prozess-step__num">03</div>
+                  <div class="prozess-step__content">
+                    <h4>Umsetzen</h4>
+                    <p>Professionelle Durchführung mit laufender Kommunikation.</p>
+                  </div>
+                </div>
+                <div class="prozess-step">
+                  <div class="prozess-step__num">04</div>
+                  <div class="prozess-step__content">
+                    <h4>Begleiten</h4>
+                    <p>Auch nach dem Projekt stehen wir an deiner Seite.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cta-row" data-reveal>
+            <a href="#/agency/kontakt" class="btn btn--primary" data-link>Zum Formular</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ZITAT TEAL -->
+      <section class="quote-banner quote-banner--teal" data-reveal>
+        <div class="container">
+          <blockquote class="quote-banner__text">&bdquo;Transparent &ndash; Fair &ndash; Miteinander&ldquo;</blockquote>
+        </div>
+      </section>
+
+      <!-- USP / TROUBLESHOOTING -->
+      <section id="keyfacts" class="section section--dark">
+        <div class="container">
+          <h2 class="section__title section__title--center" data-reveal>Unser USP: <span class="accent-teal">Troubleshooting</span>!</h2>
+          <p class="lead lead--center" data-reveal>Als <strong>Agentur aus der Szene</strong> wissen wir, wo die typischen Fallstricke liegen. Mit <strong>Know-how aus den Bereichen Kunst, Sales und Eventmanagement</strong> antizipieren wir Probleme, bevor sie entstehen. Wir bieten <strong>verlässliche Umsetzung und klare Kommunikation</strong> &ndash; damit du dich auf deinen Skill konzentrieren kannst, während wir den Rest regeln.</p>
+        </div>
+      </section>
+
+      <!-- GARANTIE -->
+      <section class="section section--dark">
+        <div class="container">
+          <div class="split-text" data-reveal>
+            <div class="split-text__left">
+              <h2 class="section__title">Garantie &amp;<br><span class="accent-teal">keine Vertragsbindung</span></h2>
+            </div>
+            <div class="split-text__right">
+              <p class="lead">Alle Pakete und Einzelleistungen sind sowohl für Unternehmen, Agenturen, Talente jeglicher Art, als auch für Privatpersonen buchbar.</p>
+              <p>Die Inhalte werden in einem kostenfreien Erstgespräch individuell abgestimmt und fair kalkuliert. Keine versteckten Kosten, keine Vertragsbindung.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- REVIEWS -->
+      <section class="reviews section section--dark" data-reveal>
+        <div class="container">
+          <h2 class="section__title section__title--center">Was andere <span class="accent-pink">sagen</span></h2>
+          <div class="reviews__grid">
+            <div class="review-card">
+              <div class="review-card__quote">&bdquo;</div>
+              <p class="review-card__text">Philipp hat unser Event auf ein ganz neues Level gehoben. Die Kommunikation war top und die Umsetzung besser als erwartet.</p>
+              <div class="review-card__footer">
+                <div class="review-card__line"></div>
+                <span class="review-card__author">Zufriedener Kunde</span>
+              </div>
+            </div>
+            <div class="review-card review-card--accent">
+              <div class="review-card__quote">&bdquo;</div>
+              <p class="review-card__text">Endlich jemand, der die Szene versteht und gleichzeitig professionell arbeitet. Klare Empfehlung!</p>
+              <div class="review-card__footer">
+                <div class="review-card__line"></div>
+                <span class="review-card__author">Künstler aus Hannover</span>
+              </div>
+            </div>
+            <div class="review-card">
+              <div class="review-card__quote">&bdquo;</div>
+              <p class="review-card__text">Fair, ehrlich, zuverlässig. So muss Zusammenarbeit sein. Wir arbeiten jederzeit wieder zusammen.</p>
+              <div class="review-card__footer">
+                <div class="review-card__line"></div>
+                <span class="review-card__author">Event-Veranstalter</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ZITAT PINK -->
+      <section class="quote-banner quote-banner--pink" data-reveal>
+        <div class="container">
+          <blockquote class="quote-banner__text">&bdquo;Verstehen, bevor wir planen. Planen, bevor wir umsetzen. Begleiten, auch nach dem Projekt.&ldquo;</blockquote>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="section section--dark">
+        <div class="container container--narrow">
+          <h2 class="section__title section__title--center" data-reveal>Häufig gestellte <span class="accent-teal">Fragen</span></h2>
+          <div class="faq-list" data-reveal>
+            <div class="faq-item">
+              <button class="faq-item__question">
+                <span>Wer bist, was machst du, was habe ich davon?</span>
+                <span class="faq-item__icon">+</span>
+              </button>
+              <div class="faq-item__answer">
+                <p>Wir sind Free Your Skill (FYS) &mdash; eine Agentur aus Hannover, die Talente, Events und Unternehmen verbindet. Wir planen Projekte, vermitteln passende Talente und bieten Support während und nach dem Projekt. Für dich heißt das: direkte Vernetzung, Projektplanung, laufende Betreuung, transparente Preise (Startpakete ab ~299&euro;) sowie deutschlandweite und digitale Einsätze.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-item__question">
+                <span>Was kostet eine Zusammenarbeit?</span>
+                <span class="faq-item__icon">+</span>
+              </button>
+              <div class="faq-item__answer">
+                <p>Die Kosten hängen vom Umfang des Projekts ab. In einem kostenlosen Erstgespräch klären wir alles und erstellen ein individuelles Angebot. Unsere Pakete starten ab 299&euro; netto.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-item__question">
+                <span>Für wen ist die Agentur geeignet?</span>
+                <span class="faq-item__icon">+</span>
+              </button>
+              <div class="faq-item__answer">
+                <p>Für Unternehmen, Agenturen, Talente jeglicher Art und auch Privatpersonen. Ob du einen Künstler für dein Event brauchst oder als Künstler vermittelt werden möchtest &ndash; wir sind für dich da.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-item__question">
+                <span>Gibt es eine Vertragsbindung?</span>
+                <span class="faq-item__icon">+</span>
+              </button>
+              <div class="faq-item__answer">
+                <p>Nein! Wir arbeiten projektbasiert und ohne langfristige Vertragsbindung. Transparenz und Fairness stehen bei uns an erster Stelle.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-item__question">
+                <span>Wie funktioniert die Vermittlung?</span>
+                <span class="faq-item__icon">+</span>
+              </button>
+              <div class="faq-item__answer">
+                <p>Du sagst uns, was du brauchst. Wir schlagen passende Talente oder Dienstleister vor. Die Vermittlungsprovision liegt bei 10&ndash;30% und wird offen kommuniziert.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-item__question">
+                <span>In welcher Region ist FYS aktiv?</span>
+                <span class="faq-item__icon">+</span>
+              </button>
+              <div class="faq-item__answer">
+                <p>Wir sind in Hannover ansässig, arbeiten aber deutschlandweit und auch digital für Online-Events und Livestreams.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TURNIER TEASER -->
+      <section id="turnier" class="turnier-teaser" data-reveal>
+        <div class="turnier-teaser__bg">
+          <img src="assets/bilder/Fotowand_Fritz Team-7.jpg" alt="Tournament">
+        </div>
+        <div class="turnier-teaser__overlay"></div>
+        <div class="container turnier-teaser__content">
+          <img src="assets/logos_all/LOGO_FYS TRNMNT_TRANSPARENT_PNG/fys-trnmnt-logo.png" alt="FYS Tournament" class="turnier-teaser__logo">
+          <h2 class="turnier-teaser__title">FREE YOUR SKILL<br>TOURNAMENT</h2>
+          <p class="turnier-teaser__text">Alle Stile und jedes Level sind willkommen. Unser Online-Turnier bringt die Community zusammen.</p>
+          <a href="#/tournament" class="btn btn--primary" data-link>Zum Turnier</a>
+        </div>
+      </section>
+
+      <!-- KONTAKT -->
+      <section id="kontakt" class="section section--dark kontakt">
+        <div class="container">
+          <div class="kontakt-grid" data-reveal>
+            <div class="kontakt-left">
+              <h2 class="section__title">Ready to<br><span class="accent-pink">Create</span>?</h2>
+              <p class="lead">Du hast eine Idee? Wir helfen dir, sie sichtbar zu machen.</p>
+              <div class="kontakt-info">
+                <div class="kontakt-info__item">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 4l8 8 8-8"/></svg>
+                  <a href="mailto:info@freeyourskill.com">info@freeyourskill.com</a>
+                </div>
+                <div class="kontakt-info__item">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                  <a href="https://instagram.com/freeyourskill_agency" target="_blank" rel="noopener">@freeyourskill_agency</a>
+                </div>
+              </div>
+            </div>
+            <div class="kontakt-right">
+              <form class="kontakt-form" id="kontaktForm" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Dein Name" required>
+                    <span class="form-error" data-error-for="name"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">E-Mail</label>
+                    <input type="email" id="email" name="email" placeholder="deine@email.de" required>
+                    <span class="form-error" data-error-for="email"></span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="betreff">Betreff</label>
+                  <select id="betreff" name="betreff">
+                    <option value="">Bitte wählen...</option>
+                    <option>Anfrage als Unternehmen</option>
+                    <option>Bewerbung als Künstler</option>
+                    <option>Allgemeine Anfrage</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="nachricht">Nachricht</label>
+                  <textarea id="nachricht" name="nachricht" rows="5" placeholder="Erzähl uns von deinem Projekt..." required></textarea>
+                  <span class="form-error" data-error-for="nachricht"></span>
+                </div>
+                <button type="submit" class="btn btn--primary btn--full">Abschicken</button>
+                <p class="form-hint">Öffnet dein E-Mail-Programm mit vorausgefüllter Nachricht.</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div data-footer></div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- VIEW: ABOUT -->
+    <!-- ============================================ -->
+    <section class="view view--page" data-view="about">
+
+      <!-- ABOUT HERO -->
+      <section class="about-page-hero">
+        <div class="about-page-hero__img-wrap">
+          <img src="assets/bilder/ML1A2687-Verbessert-RR.jpg" alt="Free Your Skill Agency" class="about-page-hero__img">
+          <div class="about-page-hero__overlay"></div>
+        </div>
+        <div class="about-page-hero__quote">
+          <blockquote>
+            <p>&bdquo;Wir glauben an echte Verbindungen &ndash; zwischen Menschen, Projekten und Ideen.&ldquo;</p>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- WAS MACHT DIE AGENTUR -->
+      <section class="section section--dark">
+        <div class="container">
+          <div class="split-text" data-reveal>
+            <div class="split-text__left">
+              <h2 class="section__title">Was macht die<br><span class="accent-teal">Agentur</span>?</h2>
+            </div>
+            <div class="split-text__right">
+              <p class="lead">Free Your Skill ist eine Agentur für kreative Verbindungen. Wir planen Events, vermitteln Talente und produzieren Content &ndash; alles aus einer Hand.</p>
+              <a href="#/agency/kontakt" class="btn btn--outline" data-link>Kontaktieren</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FORMATE -->
+      <section class="section section--dark">
+        <div class="container">
+          <div class="split-text" data-reveal>
+            <div class="split-text__left">
+              <h2 class="section__title">Welche<br><span class="accent-pink">Formate</span>?</h2>
+              <p>Für welche Art von Events vermittelst du Künstler?</p>
+            </div>
+            <div class="split-text__right">
+              <div class="format-list">
+                <div class="format-item"><span class="format-item__bullet"></span><span>Firmen-Events &amp; Messen</span></div>
+                <div class="format-item"><span class="format-item__bullet"></span><span>Kultur- &amp; Kunst-Veranstaltungen</span></div>
+                <div class="format-item"><span class="format-item__bullet"></span><span>Community-Events &amp; Workshops</span></div>
+                <div class="format-item"><span class="format-item__bullet"></span><span>Festivals &amp; Open Airs</span></div>
+                <div class="format-item"><span class="format-item__bullet"></span><span>Online-Turniere &amp; Livestreams</span></div>
+                <div class="format-item"><span class="format-item__bullet"></span><span>Content- &amp; Videoproduktionen</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DIVIDER -->
+      <section class="parallax-divider">
+        <img src="assets/bilder/DSC_0331.jpg" alt="Event atmosphere" class="parallax-divider__img">
+        <div class="parallax-divider__overlay"></div>
+      </section>
+
+      <!-- ZITAT -->
+      <section class="quote-banner quote-banner--pink" data-reveal>
+        <div class="container">
+          <blockquote class="quote-banner__text">&bdquo;Verstehen, bevor wir planen. Planen, bevor wir umsetzen. Begleiten, auch nach dem Projekt.&ldquo;</blockquote>
+        </div>
+      </section>
+
+      <!-- DER MANN DAHINTER -->
+      <section id="about" class="section section--dark about-hero">
+        <div class="container">
+          <div class="about-hero__grid" data-reveal>
+            <div class="about-hero__image-col">
+              <img src="assets/bilder/ML1A2687-Verbessert-RR.jpg" alt="Philipp Müller" class="about-hero__photo">
+              <div class="about-hero__quote-overlay">
+                <blockquote>&bdquo;Ich bin nicht irgendeine Agentur. Ich bin Teil der Szene.&ldquo;</blockquote>
+              </div>
+            </div>
+            <div class="about-hero__text-col">
+              <h2 class="section__title">Der Mann<br><span class="accent-pink">dahinter</span></h2>
+              <h3 class="about-hero__name">Philipp Müller</h3>
+              <p class="about-hero__role">Gründer &amp; Kopf der Agentur</p>
+              <p>Mit Background als Künstler, Sales- &amp; Eventmanager bringe ich Know-how von beiden Seiten mit. Seit 2009 in der Kreativszene als Artist &amp; Creator.</p>
+              <div class="about-hero__stats">
+                <div class="stat"><span class="stat__num">6+</span><span class="stat__label">Jahre Vertrieb &amp; Kundenkontakt</span></div>
+                <div class="stat"><span class="stat__num">3</span><span class="stat__label">Jahre bei fritz-kola</span></div>
+                <div class="stat"><span class="stat__num">15+</span><span class="stat__label">Jahre in der Kreativszene</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- POLAROID GALLERY -->
+      <section class="section section--dark about-gallery">
+        <div class="container">
+          <div class="polaroid-grid" data-reveal>
+            <a href="#/agency" class="polaroid polaroid--clean" data-link>
+              <img src="assets/bilder/About Me Bilder 3.png" alt="FYS Agency">
+              <span class="polaroid__label">AGENCY</span>
+            </a>
+            <a href="#/tournament" class="polaroid polaroid--clean" data-link>
+              <img src="assets/bilder/About Me Bilder 2.png" alt="FYS Tournament">
+              <span class="polaroid__label">TOURNAMENT</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- DUAL CTA -->
+      <section class="dual-cta" data-reveal>
+        <a href="#/agency/kontakt" class="dual-cta__card" data-link>
+          <img src="assets/bilder/DSC_0357.jpg" alt="Unternehmen" class="dual-cta__bg">
+          <div class="dual-cta__overlay"></div>
+          <div class="dual-cta__content">
+            <h3>Als Unternehmen anfragen</h3>
+            <span class="btn btn--small">Anfragen</span>
+          </div>
+        </a>
+        <a href="#/agency/kontakt" class="dual-cta__card" data-link>
+          <img src="assets/bilder/DSC_0341.jpg" alt="Künstler" class="dual-cta__bg">
+          <div class="dual-cta__overlay"></div>
+          <div class="dual-cta__content">
+            <h3>Als Künstler bewerben</h3>
+            <span class="btn btn--small">Bewerben</span>
+          </div>
+        </a>
+      </section>
+
+      <!-- INSTAGRAM -->
+      <section class="section section--dark insta-section">
+        <div class="container" data-reveal>
+          <h2 class="section__title section__title--center">Folge uns auf <span class="accent-pink">Instagram</span></h2>
+          <div class="insta-grid">
+            <div class="insta-placeholder"></div>
+            <div class="insta-placeholder"></div>
+            <div class="insta-placeholder"></div>
+          </div>
+          <div class="cta-row">
+            <a href="https://instagram.com/freeyourskill_agency" target="_blank" rel="noopener" class="btn btn--outline">@freeyourskill_agency</a>
+          </div>
+        </div>
+      </section>
+
+      <div data-footer></div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- VIEW: TOURNAMENT (COMING SOON) -->
+    <!-- ============================================ -->
+    <section class="view view--page coming-soon" data-view="tournament">
+      <div class="coming-soon__bg">
+        <img src="assets/bilder/Fotowand_Fritz Team-6.jpg" alt="Tournament">
+        <div class="coming-soon__overlay"></div>
+      </div>
+      <div class="container coming-soon__content" data-reveal>
+        <img src="assets/logos_all/LOGO_FYS TRNMNT_TRANSPARENT_PNG/fys-trnmnt-logo.png" alt="FYS Tournament" class="coming-soon__logo">
+        <span class="coming-soon__badge">Coming Soon</span>
+        <h1 class="coming-soon__title">FREE YOUR SKILL<br>TOURNAMENT</h1>
+        <p class="coming-soon__text">Unser Online-Turnier ist in Vorbereitung. Alle Stile, jedes Level &ndash; die Community kommt zusammen. Bald geht&rsquo;s los.</p>
+        <div class="coming-soon__actions">
+          <a href="#/agency" class="btn btn--primary" data-link>Zur Agency</a>
+          <a href="https://instagram.com/freeyourskill_agency" target="_blank" rel="noopener" class="btn btn--outline">Updates auf Instagram</a>
+        </div>
+      </div>
+      <div data-footer></div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- VIEW: IMPRESSUM -->
+    <!-- ============================================ -->
+    <section class="view view--page" data-view="impressum">
+      <section class="section section--dark legal-page">
+        <div class="container container--narrow">
+          <h1 class="section__title" data-reveal>Impressum</h1>
+          <div data-reveal>
+            <div class="legal-block">
+              <h2>Angaben gemäß &sect; 5 TMG</h2>
+              <p>Philipp Müller<br>Free Your Skill Agency<br>Strehlowweg 32<br>22605 Hamburg</p>
+            </div>
+            <div class="legal-block">
+              <h2>Unternehmensform</h2>
+              <p>Einzelunternehmen</p>
+            </div>
+            <div class="legal-block">
+              <h2>Umsatzsteuer-Identifikationsnummer</h2>
+              <p>USt-IdNr.: DE451005380</p>
+            </div>
+            <div class="legal-block">
+              <h2>Kontakt</h2>
+              <p>E-Mail: <a href="mailto:info@freeyourskill.com">info@freeyourskill.com</a></p>
+            </div>
+            <div class="legal-block">
+              <h2>Verantwortlich für den Inhalt gemäß &sect; 55 Abs. 2 RStV</h2>
+              <p>Philipp Müller<br>Strehlowweg 32<br>22605 Hamburg</p>
+            </div>
+            <div class="legal-back">
+              <a href="#/" class="btn btn--outline" data-link>&larr; Zur&uuml;ck zur Startseite</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div data-footer></div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- VIEW: DATENSCHUTZ -->
+    <!-- ============================================ -->
+    <section class="view view--page" data-view="datenschutz">
+      <section class="section section--dark legal-page">
+        <div class="container container--narrow">
+          <h1 class="section__title" data-reveal>Datenschutzerklärung</h1>
+          <div data-reveal>
+            <div class="legal-block">
+              <h2>1. Verantwortlicher</h2>
+              <p>Philipp Müller<br>Free Your Skill Agency<br>Strehlowweg 32<br>22605 Hamburg<br>E-Mail: <a href="mailto:info@freeyourskill.com">info@freeyourskill.com</a></p>
+            </div>
+            <div class="legal-block">
+              <h2>2. Erhebung und Speicherung personenbezogener Daten</h2>
+              <p>Beim Besuch dieser Website werden durch den Hosting-Anbieter automatisch Informationen in Server-Logfiles gespeichert, die dein Browser übermittelt (Browsertyp/-version, Betriebssystem, Referrer-URL, Hostname, Uhrzeit der Anfrage, IP-Adresse). Diese Daten sind nicht bestimmten Personen zuordenbar und werden nicht mit anderen Datenquellen zusammengeführt. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.</p>
+            </div>
+            <div class="legal-block">
+              <h2>3. Kontaktformular</h2>
+              <p>Das Kontaktformular dieser Website öffnet dein lokales E-Mail-Programm mit vorausgefüllten Angaben (Name, E-Mail, Nachricht). Es werden dabei keine Daten auf dieser Website gespeichert oder an Dritte übermittelt. Der Versand erfolgt über dein eigenes E-Mail-Programm. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.</p>
+            </div>
+            <div class="legal-block">
+              <h2>4. Google Fonts</h2>
+              <p>Diese Website nutzt Google Fonts zur einheitlichen Darstellung von Schriften. Beim Aufruf lädt dein Browser die benötigten Schriftarten von Google-Servern. Dabei werden Daten an Google in den USA übermittelt. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Mehr: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+            </div>
+            <div class="legal-block">
+              <h2>5. Externe Links (Social Media)</h2>
+              <p>Diese Website enthält Links zu externen Plattformen (Instagram, TikTok, Twitch, YouTube). Beim Klick verlässt du unsere Website. Für deren Datenschutzpraktiken sind wir nicht verantwortlich.</p>
+            </div>
+            <div class="legal-block">
+              <h2>6. Deine Rechte</h2>
+              <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung deiner personenbezogenen Daten sowie auf Datenübertragbarkeit und Widerspruch. Kontakt: <a href="mailto:info@freeyourskill.com">info@freeyourskill.com</a>. Außerdem hast du das Recht, dich bei einer Datenschutzaufsichtsbehörde zu beschweren.</p>
+            </div>
+            <div class="legal-back">
+              <a href="#/" class="btn btn--outline" data-link>&larr; Zur&uuml;ck zur Startseite</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div data-footer></div>
+    </section>
+
+  </main>
+
+  <!-- ============================================ -->
+  <!-- SHARED FOOTER TEMPLATE (cloned into [data-footer]) -->
+  <!-- ============================================ -->
+  <template id="footerTemplate">
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <img src="assets/logos_all/LOGO_FYS AGENCY_TRANSPARENT_PNG/fys-agency-logo-klein.png" alt="FYS Agency" class="footer__logo">
+            <p class="footer__tagline">Verbinden &mdash; Planen &mdash; Supporten</p>
+          </div>
+          <div class="footer__links">
+            <h4>Navigation</h4>
+            <a href="#/about" data-link>About</a>
+            <a href="#/agency/leistungen" data-link>Leistungen</a>
+            <a href="#/agency/faq" data-link>FAQ</a>
+            <a href="#/tournament" data-link>Turnier</a>
+          </div>
+          <div class="footer__links">
+            <h4>Rechtliches</h4>
+            <a href="#/impressum" data-link>Impressum</a>
+            <a href="#/datenschutz" data-link>Datenschutz</a>
+          </div>
+          <div class="footer__social">
+            <h4>Social Media</h4>
+            <div class="footer__social-icons">
+              <a href="https://instagram.com/freeyourskill_agency" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="https://tiktok.com/@FreeYourSkill" target="_blank" rel="noopener" aria-label="TikTok">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.52a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.66a8.21 8.21 0 004.76 1.52v-3.4a4.85 4.85 0 01-1-.09z"/></svg>
+              </a>
+              <a href="https://twitch.tv/CallMeMullai" target="_blank" rel="noopener" aria-label="Twitch">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg>
+              </a>
+              <a href="https://youtube.com/@freeyourskill" target="_blank" rel="noopener" aria-label="YouTube">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>&copy; 2025 Free Your Skill Agency. Alle Rechte vorbehalten. &mdash; <a href="#/impressum" data-link>Impressum</a> &mdash; <a href="#/datenschutz" data-link>Datenschutz</a></p>
+        </div>
+      </div>
+    </footer>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
