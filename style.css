@@ -164,14 +164,14 @@ body[data-route="home"] .header { display: none; }
 /* Logo cards on splash: compact box, not tall 4/5 photo ratio */
 .intro.view--active .intro__card--logo {
   aspect-ratio: auto;
-  min-height: 200px;
-  padding: 1.5rem 1.25rem 1.25rem;
+  min-height: 300px;
+  padding: 2rem 1.5rem 1.5rem;
 }
 /* High-contrast sticker logos: screen blend drops the black ground, white pops */
 .intro.view--active .intro__card-logo {
-  max-width: clamp(120px, 16vw, 190px);
+  max-width: clamp(200px, 26vw, 300px);
   mix-blend-mode: screen;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 .intro.view--active .intro__card-label {
   font-family: var(--font-heading);
