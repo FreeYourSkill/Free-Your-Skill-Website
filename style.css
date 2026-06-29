@@ -1884,3 +1884,30 @@ body[data-route="home"] .header { display: none; }
 .form-conditional.is-active {
   display: block;
 }
+
+/* ============================================
+   LANGUAGE TOGGLE (DE / EN)
+   ============================================ */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--gray);
+  padding: 0.3rem 0.4rem;
+  border: 1px solid rgba(255,255,255,0.12);
+  transition: border-color 0.3s;
+}
+.lang-toggle:hover { border-color: var(--pink); }
+.lang-toggle__opt { transition: color 0.3s; }
+.lang-toggle__opt.is-active { color: var(--white); }
+.lang-toggle__sep { color: var(--gray); opacity: 0.5; }
+.lang-toggle--mobile {
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  padding: 0.5rem 0.9rem;
+}
+.lang-toggle--mobile .lang-toggle__opt.is-active { color: var(--pink); }
