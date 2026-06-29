@@ -49,11 +49,11 @@
   const metaDesc = document.querySelector('meta[name="description"]');
   let currentLang = 'de';
 
-  // Header nav links highlight per route
-  const NAV_MATCH = {
-    about: ['#/about'],
-    agency: ['#/agency/leistungen', '#/agency/faq', '#/agency/kontakt'],
-    tournament: ['#/tournament']
+  // Default highlighted nav link per view (used when no specific anchor is active)
+  const NAV_DEFAULT = {
+    about: '#/about',
+    agency: '#/agency/leistungen',
+    tournament: '#/tournament'
   };
 
   const header = document.getElementById('header');
@@ -119,11 +119,12 @@
       metaDesc.setAttribute('content', DESCRIPTIONS[currentLang][view]);
     }
 
-    // nav active state
+    // nav active state: exact hash match, else the view's default link (only when no anchor)
+    const curHash = '#/' + view + (anchor ? '/' + anchor : '');
     document.querySelectorAll('.header__link').forEach(link => {
       const href = link.getAttribute('href');
-      const matches = (NAV_MATCH[view] || []).includes(href);
-      link.classList.toggle('header__link--active', matches);
+      const active = href === curHash || (!anchor && href === NAV_DEFAULT[view]);
+      link.classList.toggle('header__link--active', active);
     });
 
     // restart entry animation
