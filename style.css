@@ -159,7 +159,7 @@ body[data-route="home"] .header { display: none; }
 }
 /* Compact logo: square PNG has lots of transparent padding, cap its size */
 .intro.view--active .intro__logo-main { margin-bottom: 0; }
-.intro.view--active .intro__logo-img { max-width: 200px; }
+.intro.view--active .intro__logo-img { max-width: clamp(260px, 44vw, 420px); }
 .intro.view--active .intro__tagline { margin-bottom: 1.5rem; }
 /* Logo cards on splash: compact box, not tall 4/5 photo ratio */
 .intro.view--active .intro__card--logo {
@@ -243,7 +243,7 @@ body[data-route="home"] .header { display: none; }
 .intro__logo-img {
   max-width: 380px;
   margin: 0 auto;
-  filter: invert(1) drop-shadow(0 0 60px rgba(112, 176, 176, 0.15));
+  filter: drop-shadow(0 0 50px rgba(112, 176, 176, 0.2));
 }
 .intro__tagline {
   font-family: var(--font-heading);
@@ -1848,4 +1848,39 @@ body[data-route="home"] .header { display: none; }
     transition: none;
   }
   .btn { min-height: 44px; }
+}
+
+/* ============================================
+   PDF FIXES (SEO, Hero kicker, conditional form)
+   ============================================ */
+
+/* Screen-reader-only (per-view H1 for SEO without visual change) */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Hero kicker (motto as bracket above the service statement) */
+.hero__kicker {
+  font-family: var(--font-heading);
+  font-size: clamp(0.8rem, 1.6vw, 1rem);
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 1rem;
+}
+
+/* Conditional form fields (Artists / Brands / Privat) */
+.form-conditional {
+  display: none;
+  animation: viewIn 0.4s var(--ease-out) both;
+}
+.form-conditional.is-active {
+  display: block;
 }

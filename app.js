@@ -9,13 +9,24 @@
   const VIEWS = ['home', 'agency', 'about', 'tournament', 'impressum', 'datenschutz'];
 
   const TITLES = {
-    home: 'Free Your Skill',
-    agency: 'Free Your Skill Agency',
-    about: 'Über uns — Free Your Skill',
-    tournament: 'Tournament — Free Your Skill',
+    home: 'Free Your Skill — Events, Vermittlung & Content aus Hamburg',
+    agency: 'Agency — Events, Vermittlung & Content | Free Your Skill Hamburg',
+    about: 'Über uns — Free Your Skill Agency Hamburg',
+    tournament: 'Tournament (Coming soon) — Free Your Skill',
     impressum: 'Impressum — Free Your Skill',
     datenschutz: 'Datenschutz — Free Your Skill'
   };
+
+  const DESCRIPTIONS = {
+    home: 'Free Your Skill Agency aus Hamburg, deutschlandweit tätig: Eventplanung, Vermittlung von Talenten und Content-Produktion aus einer Hand.',
+    agency: 'Eventplanung, Vermittlung und Projekt-Support aus einer Hand. Die Agentur aus der Szene in Hamburg, deutschlandweit tätig. Fair, transparent, ohne Vertragsbindung.',
+    about: 'Free Your Skill — gegründet von Philipp Müller. Künstler, Sales- und Eventmanager mit über 15 Jahren in der Kreativszene. Aus Hamburg, deutschlandweit tätig.',
+    tournament: 'Das Free Your Skill Tournament ist in Vorbereitung. Alle Stile, jedes Level. Bald geht es los.',
+    impressum: 'Impressum der Free Your Skill Agency, Philipp Müller, Hamburg.',
+    datenschutz: 'Datenschutzerklärung der Free Your Skill Agency.'
+  };
+
+  const metaDesc = document.querySelector('meta[name="description"]');
 
   // Header nav links highlight per route
   const NAV_MATCH = {
@@ -83,6 +94,7 @@
 
     document.body.setAttribute('data-route', view);
     document.title = TITLES[view] || 'Free Your Skill';
+    if (metaDesc && DESCRIPTIONS[view]) metaDesc.setAttribute('content', DESCRIPTIONS[view]);
 
     // nav active state
     document.querySelectorAll('.header__link').forEach(link => {
@@ -196,6 +208,28 @@
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
     }
 
+    // ---- Conditional fields by Betreff (Unternehmen / Künstler / Privat) ----
+    const BETREFF_LABELS = {
+      unternehmen: 'Unternehmen / Marke',
+      kuenstler: 'Künstler / Artist',
+      privat: 'Privatperson',
+      allgemein: 'Allgemeine Anfrage'
+    };
+    // Which extra inputs belong to which Betreff, with human labels for the mail body
+    const COND_FIELDS = {
+      unternehmen: [['firma', 'Unternehmen/Marke'], ['eventart', 'Art des Events/Projekts']],
+      kuenstler: [['disziplin', 'Disziplin/Skill'], ['links', 'Links']],
+      privat: [['anlass', 'Anlass']]
+    };
+    const conds = form.querySelectorAll('.form-conditional');
+
+    function syncConditional() {
+      const val = fields.betreff.value;
+      conds.forEach(c => c.classList.toggle('is-active', c.dataset.cond === val));
+    }
+    fields.betreff.addEventListener('change', syncConditional);
+    syncConditional();
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       let ok = true;
@@ -216,13 +250,20 @@
         return;
       }
 
-      const betreff = fields.betreff.value || 'Allgemeine Anfrage';
-      const subject = `[FYS Anfrage] ${betreff} — ${fields.name.value.trim()}`;
-      const body =
+      const betreffVal = fields.betreff.value || 'allgemein';
+      const betreffLabel = BETREFF_LABELS[betreffVal] || 'Allgemeine Anfrage';
+      const subject = `[FYS Anfrage] ${betreffLabel} — ${fields.name.value.trim()}`;
+
+      let body =
         `Name: ${fields.name.value.trim()}\n` +
         `E-Mail: ${fields.email.value.trim()}\n` +
-        `Betreff: ${betreff}\n\n` +
-        `${fields.nachricht.value.trim()}\n`;
+        `Anliegen: ${betreffLabel}\n`;
+      // append filled conditional fields for the chosen Betreff
+      (COND_FIELDS[betreffVal] || []).forEach(([id, label]) => {
+        const el = form.querySelector('#' + id);
+        if (el && el.value.trim()) body += `${label}: ${el.value.trim()}\n`;
+      });
+      body += `\n${fields.nachricht.value.trim()}\n`;
 
       const mailto = `mailto:info@freeyourskill.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       window.location.href = mailto;
