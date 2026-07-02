@@ -10,16 +10,16 @@
 
   const TITLES = {
     de: {
-      home: 'Free Your Skill — Events, Vermittlung & Content aus Hamburg',
-      agency: 'Agency — Events, Vermittlung & Content | Free Your Skill Hamburg',
+      home: 'Free Your Skill — Verbinden, Planen, Supporten aus Hamburg',
+      agency: 'Agency — Verbinden, Planen, Supporten | Free Your Skill Hamburg',
       about: 'Über uns — Free Your Skill Agency Hamburg',
       tournament: 'Tournament (Coming soon) — Free Your Skill',
       impressum: 'Impressum — Free Your Skill',
       datenschutz: 'Datenschutz — Free Your Skill'
     },
     en: {
-      home: 'Free Your Skill — Events, Booking & Content from Hamburg',
-      agency: 'Agency — Events, Booking & Content | Free Your Skill Hamburg',
+      home: 'Free Your Skill — Connect, Plan, Support from Hamburg',
+      agency: 'Agency — Connect, Plan, Support | Free Your Skill Hamburg',
       about: 'About — Free Your Skill Agency Hamburg',
       tournament: 'Tournament (Coming soon) — Free Your Skill',
       impressum: 'Imprint — Free Your Skill',
@@ -316,24 +316,24 @@
     'VERBINDEN · PLANEN · SUPPORTEN': 'CONNECT · PLAN · SUPPORT',
     'Impressum': 'Imprint', 'Datenschutz': 'Privacy',
     // Hero
-    'Events, Vermittlung': 'Events, Booking',
-    'Die Agentur aus der Szene. Für Unternehmen, Künstler und Privatpersonen. Aus Hamburg, deutschlandweit tätig.':
-      'The agency from within the scene. For companies, artists and private clients. Based in Hamburg, active nationwide.',
-    'Jetzt anfragen': 'Get in touch',
+    'Befreie deinen': 'Free your',
+    'Große Pläne, aber allein kommst du nicht weiter? Ich verbinde, plane und zieh dein Projekt mit dir durch. Aus der Szene, für die Szene.':
+      'Big plans, but you can’t get there alone? I connect, plan and see your project through with you. From the scene, for the scene.',
+    'LASS MAL CONNECTEN!': 'LET’S CONNECT!',
     // Was macht FYS
     'Was macht': 'What is',
-    'Eine Agentur für kreative Verbindungen, mit klarer Kommunikation und verlässlicher Umsetzung. Wir bringen Talente, Auftraggebende und Projekte zusammen: fair, professionell und auf Augenhöhe.':
-      'An agency for creative connections, with clear communication and reliable execution. We bring talents, clients and projects together: fair, professional and on equal footing.',
+    'Eine Agentur für kreative Verbindungen, mit klarer Kommunikation und verlässlicher Umsetzung. Ich bringe Talente, Auftraggebende und Projekte zusammen: fair, professionell und auf Augenhöhe.':
+      'An agency for creative connections, with clear communication and reliable execution. I bring talents, clients and projects together: fair, professional and on equal footing.',
     'Eventplanung': 'Event Planning',
-    'Von Konzept bis Durchführung, live und digital: Firmen-Events, Messen, Festivals, Community-Events und Workshops. Wir planen und realisieren Events, die wirken.':
-      'From concept to delivery, live and digital: corporate events, trade fairs, festivals, community events and workshops. We plan and deliver events that work.',
+    'Von Konzept bis Durchführung, live und digital: Firmen-Events, Messen, Festivals, Community-Events und Workshops. Ich plane und realisiere Events, die wirken.':
+      'From concept to delivery, live and digital: corporate events, trade fairs, festivals, community events and workshops. I plan and deliver events that work.',
     'Vermittlung': 'Booking & Placement',
-    'Wir verbinden Talente mit Auftraggebenden: Tänzer, Musiker, Artists, Moderatoren und Creator. Passend, fair und auf Augenhöhe.':
-      'We connect talents with clients: dancers, musicians, artists, hosts and creators. A good fit, fair and on equal footing.',
+    'Ich verbinde Talente mit Auftraggebenden: Tänzer, Musiker, Artists, Moderatoren und Creator. Passend, fair und auf Augenhöhe.':
+      'I connect talents with clients: dancers, musicians, artists, hosts and creators. A good fit, fair and on equal footing.',
     'Projekt-Support': 'Project Support',
-    'Beratung, Content- und Videoproduktion, Foto und Livestreaming: wir begleiten dein Projekt von A bis Z, auch nach dem Event.':
-      'Consulting, content and video production, photo and livestreaming: we support your project from A to Z, even after the event.',
-    'Über uns erfahren': 'Learn about us',
+    'Beratung, Content- und Videoproduktion, Foto und Livestreaming: ich begleite dein Projekt von A bis Z, auch nach dem Event.':
+      'Consulting, content and video production, photo and livestreaming: I support your project from A to Z, even after the event.',
+    'Über mich erfahren': 'Learn about me',
     // Vorteile
     'Vorteile der': 'Benefits of', 'Zusammenarbeit': 'working together',
     'Als Unternehmen': 'For Companies',
@@ -349,32 +349,32 @@
     'Persönliche Betreuung & ehrliche Kommunikation': 'Personal support & honest communication',
     'Unterstützung bei Selbstvermarktung': 'Support with self-marketing',
     'Community & Netzwerk': 'Community & network',
-    'Als Künstler bewerben': 'Apply as an artist',
+    'Als Artist bewerben': 'Apply as an artist',
     // Prozess
     'Wie läuft': 'How it', 'es ab': 'works',
     'Verstehen': 'Understand',
-    'Kostenloses Erstgespräch: wir hören zu und verstehen dein Projekt.': 'Free initial consultation: we listen and understand your project.',
+    'Kostenloses Erstgespräch: ich höre zu und verstehe dein Projekt.': 'Free initial consultation: I listen and understand your project.',
     'Planen': 'Plan',
-    'Wir entwickeln ein individuelles Konzept mit klaren Schritten.': 'We develop a tailored concept with clear steps.',
+    'Ich entwickle ein individuelles Konzept mit klaren Schritten.': 'I develop a tailored concept with clear steps.',
     'Umsetzen': 'Execute',
     'Professionelle Durchführung mit laufender Kommunikation.': 'Professional delivery with ongoing communication.',
     'Begleiten': 'Support',
-    'Auch nach dem Projekt stehen wir an deiner Seite.': 'We stay by your side even after the project.',
+    'Auch nach dem Projekt stehe ich an deiner Seite.': 'I stay by your side even after the project.',
     'Zum Formular': 'To the form',
     // Quotes
     '„Transparent. Fair. Miteinander.“': '„Transparent. Fair. Together.“',
-    '„Verstehen, bevor wir planen. Planen, bevor wir umsetzen. Begleiten, auch nach dem Projekt.“':
-      '„Understand before we plan. Plan before we execute. Support, even after the project.“',
+    '„Verstehen, bevor ich plane. Planen, bevor ich umsetze. Begleiten, auch nach dem Projekt.“':
+      '„Understand before I plan. Plan before I execute. Support, even after the project.“',
     // Troubleshooting
-    'Unser USP:': 'Our USP:',
+    'Mein USP:': 'My USP:',
     'Als': 'As an',
     'Agentur aus der Szene': 'agency from within the scene',
-    'wissen wir, wo die typischen Fallstricke liegen. Mit': 'we know where the typical pitfalls lie. With',
+    'weiß ich, wo die typischen Fallstricke liegen. Mit': 'I know where the typical pitfalls lie. With',
     'Know-how aus den Bereichen Kunst, Sales und Eventmanagement': 'know-how in art, sales and event management',
-    'antizipieren wir Probleme, bevor sie entstehen. Wir bieten': 'we anticipate problems before they arise. We offer',
+    'antizipiere ich Probleme, bevor sie entstehen. Ich biete': 'I anticipate problems before they arise. I offer',
     'verlässliche Umsetzung und klare Kommunikation': 'reliable execution and clear communication',
-    ', damit du dich auf deinen Skill konzentrieren kannst, während wir den Rest regeln.':
-      ', so you can focus on your skill while we handle the rest.',
+    ', damit du dich auf deinen Skill konzentrieren kannst, während ich den Rest regle.':
+      ', so you can focus on your skill while I handle the rest.',
     // Garantie
     'Garantie &': 'Guarantee &', 'keine Vertragsbindung': 'no lock-in',
     'Alle Pakete und Einzelleistungen sind sowohl für Unternehmen, Agenturen, Talente jeglicher Art, als auch für Privatpersonen buchbar.':
@@ -384,29 +384,29 @@
     // FAQ
     'Häufig gestellte': 'Frequently asked', 'Fragen': 'questions',
     'Wer bist, was machst du, was habe ich davon?': 'Who are you, what do you do, what is in it for me?',
-    'Wir sind Free Your Skill (FYS), die Agentur aus Hamburg, die Talente, Events und Unternehmen verbindet. Wir planen Projekte, vermitteln passende Talente und bieten Support während und nach dem Projekt. Für dich heißt das: direkte Vernetzung, Projektplanung, laufende Betreuung, faire und transparente Preise sowie deutschlandweite und digitale Einsätze.':
-      'We are Free Your Skill (FYS), the agency from Hamburg connecting talents, events and companies. We plan projects, place the right talents and provide support during and after the project. For you that means: direct networking, project planning, ongoing support, fair and transparent pricing as well as nationwide and digital assignments.',
+    'Free Your Skill (FYS) ist die Agentur aus Hamburg, die Talente, Events und Unternehmen verbindet. Ich plane Projekte, vermittle passende Talente und biete Support während und nach dem Projekt. Für dich heißt das: direkte Vernetzung, Projektplanung, laufende Betreuung, faire und transparente Preise sowie deutschlandweite und digitale Einsätze.':
+      'Free Your Skill (FYS) is the agency from Hamburg connecting talents, events and companies. I plan projects, place the right talents and provide support during and after the project. For you that means: direct networking, project planning, ongoing support, fair and transparent pricing as well as nationwide and digital assignments.',
     'Was kostet eine Zusammenarbeit?': 'What does working together cost?',
-    'Die Kosten hängen vom Umfang des Projekts ab. In einem kostenlosen Erstgespräch klären wir alles und erstellen ein individuelles Angebot. Wir kalkulieren fair und transparent; der Einstieg ist schon im niedrigen dreistelligen Bereich möglich.':
-      'Costs depend on the scope of the project. In a free initial consultation we clarify everything and create a tailored offer. We price fairly and transparently; entry is possible already in the low three-digit range.',
+    'Die Kosten hängen vom Umfang des Projekts ab. In einem kostenlosen Erstgespräch kläre ich alles und erstelle ein individuelles Angebot. Ich kalkuliere fair und transparent; der Einstieg ist schon im niedrigen dreistelligen Bereich möglich.':
+      'Costs depend on the scope of the project. In a free initial consultation I clarify everything and create a tailored offer. I price fairly and transparently; entry is possible already in the low three-digit range.',
     'Für wen ist die Agentur geeignet?': 'Who is the agency for?',
-    'Für Unternehmen, Agenturen, Talente jeglicher Art und auch Privatpersonen. Ob du einen Künstler für dein Event brauchst oder als Künstler vermittelt werden möchtest: wir sind für dich da.':
-      'For companies, agencies, talents of any kind and private clients too. Whether you need an artist for your event or want to be placed as an artist: we are here for you.',
+    'Für Unternehmen, Agenturen, Talente jeglicher Art und auch Privatpersonen. Ob du einen Künstler für dein Event brauchst oder als Künstler vermittelt werden möchtest: ich bin für dich da.':
+      'For companies, agencies, talents of any kind and private clients too. Whether you need an artist for your event or want to be placed as an artist: I am here for you.',
     'Gibt es eine Vertragsbindung?': 'Is there a lock-in contract?',
-    'Nein! Wir arbeiten projektbasiert und ohne langfristige Vertragsbindung. Transparenz und Fairness stehen bei uns an erster Stelle.':
-      'No! We work project-based and without long-term lock-in. Transparency and fairness come first.',
+    'Nein! Ich arbeite projektbasiert und ohne langfristige Vertragsbindung. Transparenz und Fairness stehen bei mir an erster Stelle.':
+      'No! I work project-based and without long-term lock-in. Transparency and fairness come first.',
     'Wie funktioniert die Vermittlung?': 'How does placement work?',
-    'Du sagst uns, was du brauchst. Wir schlagen passende Talente oder Dienstleister vor. Die Vermittlungsprovision vereinbaren wir individuell und kommunizieren sie immer offen und transparent.':
-      'You tell us what you need. We suggest suitable talents or service providers. The placement fee is agreed individually and always communicated openly and transparently.',
+    'Du sagst mir, was du brauchst. Ich schlage passende Talente oder Dienstleister vor. Die Vermittlungsprovision vereinbare ich individuell und kommuniziere sie immer offen und transparent.':
+      'You tell me what you need. I suggest suitable talents or service providers. The placement fee is agreed individually and always communicated openly and transparently.',
     'In welcher Region ist FYS aktiv?': 'Which region does FYS operate in?',
-    'Wir sind in Hamburg ansässig, arbeiten aber deutschlandweit und auch digital für Online-Events und Livestreams.':
-      'We are based in Hamburg but work nationwide and also digitally for online events and livestreams.',
+    'Ich bin in Hamburg ansässig, arbeite aber deutschlandweit und auch digital für Online-Events und Livestreams.':
+      'I am based in Hamburg but work nationwide and also digitally for online events and livestreams.',
     // Turnier teaser
-    'Alle Stile und jedes Level sind willkommen. Unser Online-Turnier bringt die Community zusammen.':
-      'All styles and every level are welcome. Our online tournament brings the community together.',
+    'Alle Stile und jedes Level sind willkommen. Mein Online-Turnier bringt die Community zusammen.':
+      'All styles and every level are welcome. My online tournament brings the community together.',
     'Zum Turnier': 'To the tournament',
     // Kontakt
-    'Du hast eine Idee? Wir helfen dir, sie sichtbar zu machen.': 'Got an idea? We help you make it visible.',
+    'Du hast eine Idee? Ich helfe dir, sie sichtbar zu machen.': 'Got an idea? I help you make it visible.',
     'Ich bin / mein Anliegen': 'I am / my enquiry',
     'Bitte wählen...': 'Please choose...',
     'Unternehmen / Marke': 'Company / Brand',
@@ -421,11 +421,11 @@
     'Öffnet dein E-Mail-Programm mit vorausgefüllter Nachricht.': 'Opens your email app with a pre-filled message.',
     // About
     'Über Free Your Skill — die Agentur aus Hamburg': 'About Free Your Skill — the agency from Hamburg',
-    '„Wir glauben an echte Verbindungen zwischen Menschen, Projekten und Ideen.“':
-      '„We believe in real connections between people, projects and ideas.“',
+    '„Ich glaube an echte Verbindungen zwischen Menschen, Projekten und Ideen.“':
+      '„I believe in real connections between people, projects and ideas.“',
     'Was macht die': 'What does the', 'Agentur': 'agency',
-    'Free Your Skill ist eine Agentur für kreative Verbindungen. Wir planen Events, vermitteln Talente und produzieren Content, alles aus einer Hand.':
-      'Free Your Skill is an agency for creative connections. We plan events, place talents and produce content, all from a single source.',
+    'Free Your Skill ist eine Agentur für kreative Verbindungen. Ich plane Events, vermittle Talente und produziere Content, alles aus einer Hand.':
+      'Free Your Skill is an agency for creative connections. I plan events, place talents and produce content, all from a single source.',
     'Kontaktieren': 'Get in touch',
     'Welche': 'Which', 'Formate': 'formats',
     'Für welche Art von Events vermittelst du Künstler?': 'What kind of events do you place artists for?',
@@ -440,15 +440,15 @@
     'Mit Background als Künstler, Sales- & Eventmanager bringe ich Know-how von beiden Seiten mit. Seit 2009 in der Kreativszene als Artist & Creator.':
       'With a background as an artist, sales and event manager I bring know-how from both sides. In the creative scene as an artist & creator since 2009.',
     'Jahre Vertrieb & Kundenkontakt': 'years of sales & client contact',
-    'Jahre bei fritz-kola': 'years at fritz-kola',
+    'Jahre Eventmanagement': 'years of event management',
     'Jahre in der Kreativszene': 'years in the creative scene',
     'Ich bin nicht irgendeine Agentur. Ich bin Teil der Szene.': 'I am not just any agency. I am part of the scene.',
     '„Ich bin nicht irgendeine Agentur. Ich bin Teil der Szene.“': '„I am not just any agency. I am part of the scene.“',
-    'Folge uns auf': 'Follow us on',
+    'Folge mir auf': 'Follow me on',
     'Anfragen': 'Enquire', 'Bewerben': 'Apply',
     // Tournament coming soon
-    'Unser Online-Turnier ist in Vorbereitung. Alle Stile, jedes Level, die Community kommt zusammen. Bald geht’s los.':
-      'Our online tournament is in preparation. All styles, every level, the community comes together. Coming soon.',
+    'Mein Online-Turnier ist in Vorbereitung. Alle Stile, jedes Level, die Community kommt zusammen. Bald geht’s los.':
+      'My online tournament is in preparation. All styles, every level, the community comes together. Coming soon.',
     'Zur Agency': 'To the agency', 'Updates auf Instagram': 'Updates on Instagram',
     // Footer
     'Verbinden · Planen · Supporten': 'Connect · Plan · Support',
@@ -467,7 +467,7 @@
     disziplin: ['z. B. Tanz, Musik, Moderation', 'e.g. dance, music, hosting'],
     links: ['@profil / Website', '@profile / website'],
     anlass: ['z. B. Geburtstag, Hochzeit, privates Event', 'e.g. birthday, wedding, private event'],
-    nachricht: ['Erzähl uns von deinem Projekt...', 'Tell us about your project...']
+    nachricht: ['Erzähl mir von deinem Projekt...', 'Tell me about your project...']
   };
 
   let i18nNodes = null; // [{node, de, lead, trail}]
