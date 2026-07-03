@@ -210,7 +210,7 @@
     }, { passive: true });
   }
 
-  /* ---- CONTACT FORM -> mailto ---- */
+  /* ---- CONTACT FORM -> Netlify Forms (fetch, kein mailto) ---- */
   function initContactForm() {
     const form = document.getElementById('kontaktForm');
     if (!form) return;
@@ -274,29 +274,42 @@
         return;
       }
 
-      const betreffVal = fields.betreff.value || 'allgemein';
-      const betreffLabel = BETREFF_LABELS[betreffVal] || 'Allgemeine Anfrage';
-      const subject = `[FYS Anfrage] ${betreffLabel} — ${fields.name.value.trim()}`;
-
-      let body =
-        `Name: ${fields.name.value.trim()}\n` +
-        `E-Mail: ${fields.email.value.trim()}\n` +
-        `Anliegen: ${betreffLabel}\n`;
-      // append filled conditional fields for the chosen Betreff
-      (COND_FIELDS[betreffVal] || []).forEach(([id, label]) => {
-        const el = form.querySelector('#' + id);
-        if (el && el.value.trim()) body += `${label}: ${el.value.trim()}\n`;
-      });
-      body += `\n${fields.nachricht.value.trim()}\n`;
-
-      const mailto = `mailto:info@freeyourskill.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailto;
-
-      const hint = form.querySelector('.form-hint');
-      if (hint) {
-        hint.textContent = 'E-Mail-Programm geöffnet. Falls nichts passiert, schreib direkt an info@freeyourskill.com.';
-        hint.classList.add('form-hint--ok');
+      // ---- Netlify Forms: alle Felder url-encoded per fetch an "/" senden (kein mailto mehr) ----
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const statusEl = form.querySelector('.form-hint');
+      if (statusEl) {
+        statusEl.classList.remove('form-hint--ok', 'form-hint--error');
+        statusEl.textContent = currentLang === 'en' ? 'Sending…' : 'Wird gesendet…';
       }
+      if (submitBtn) submitBtn.disabled = true;
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          form.reset();
+          syncConditional();
+          if (statusEl) {
+            statusEl.textContent = currentLang === 'en'
+              ? 'Thank you! Your message has been sent — I’ll get back to you as soon as possible.'
+              : 'Danke! Deine Nachricht ist angekommen — ich melde mich so schnell wie möglich bei dir.';
+            statusEl.classList.add('form-hint--ok');
+          }
+        })
+        .catch(() => {
+          if (statusEl) {
+            statusEl.textContent = currentLang === 'en'
+              ? 'Something went wrong. Please email me directly at info@freeyourskill.com.'
+              : 'Etwas ist schiefgelaufen. Schreib mir gern direkt an info@freeyourskill.com.';
+            statusEl.classList.add('form-hint--error');
+          }
+        })
+        .finally(() => {
+          if (submitBtn) submitBtn.disabled = false;
+        });
     });
 
     // clear error on input

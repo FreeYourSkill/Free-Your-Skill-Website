@@ -437,7 +437,9 @@
               </div>
             </div>
             <div class="kontakt-right">
-              <form class="kontakt-form" id="kontaktForm" novalidate>
+              <form class="kontakt-form" id="kontaktForm" name="kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+                <input type="hidden" name="form-name" value="kontakt" />
+                <p class="hp-field" hidden><label>Bitte dieses Feld leer lassen: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
                 <div class="form-row">
                   <div class="form-group">
                     <label for="name">Name</label>
@@ -503,7 +505,7 @@
                   <span class="form-error" data-error-for="nachricht"></span>
                 </div>
                 <button type="submit" class="btn btn--primary btn--full">Abschicken</button>
-                <p class="form-hint">Öffnet dein E-Mail-Programm mit vorausgefüllter Nachricht.</p>
+                <p class="form-hint" role="status" aria-live="polite"></p>
               </form>
             </div>
           </div>
@@ -809,6 +811,29 @@
       </div>
     </footer>
   </template>
+
+  <!-- ============================================ -->
+  <!-- Verstecktes statisches Formular — nur zur Netlify-Formularerkennung beim Deploy.
+       Muss exakt dieselben name-Attribute wie das echte Formular haben. -->
+  <!-- ============================================ -->
+  <form name="kontakt" netlify netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="kontakt" />
+    <input name="bot-field" />
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <select name="betreff">
+      <option value="unternehmen"></option>
+      <option value="kuenstler"></option>
+      <option value="privat"></option>
+      <option value="allgemein"></option>
+    </select>
+    <input type="text" name="firma" />
+    <input type="text" name="eventart" />
+    <input type="text" name="disziplin" />
+    <input type="text" name="links" />
+    <input type="text" name="anlass" />
+    <textarea name="nachricht"></textarea>
+  </form>
 
   <!-- Instagram-Feed (Behold.so JSON) — lädt die neuesten Posts in die 3 Kacheln -->
   <script>

@@ -1844,6 +1844,7 @@ body[data-route="home"] .header { display: none; }
   margin-top: 0.25rem;
 }
 .form-hint--ok { color: var(--teal); }
+.form-hint--error { color: var(--pink); }
 
 /* Button micro-interaction: subtle sheen on primary */
 .btn--primary::after {
