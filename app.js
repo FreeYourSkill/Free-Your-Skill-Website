@@ -31,7 +31,7 @@
     de: {
       home: 'Free Your Skill Agency aus Hamburg, deutschlandweit tätig: Eventplanung, Vermittlung von Talenten und Content-Produktion aus einer Hand.',
       agency: 'Eventplanung, Vermittlung und Projekt-Support aus einer Hand. Die Agentur aus der Szene in Hamburg, deutschlandweit tätig. Fair, transparent, ohne Vertragsbindung.',
-      about: 'Free Your Skill — gegründet von Philipp Müller. Künstler, Sales- und Eventmanager mit über 15 Jahren in der Kreativszene. Aus Hamburg, deutschlandweit tätig.',
+      about: 'Free Your Skill — gegründet von Philipp Müller. Artist, Sales- und Eventmanager mit über 15 Jahren in der Kreativszene. Aus Hamburg, deutschlandweit tätig.',
       tournament: 'Das Free Your Skill Tournament ist in Vorbereitung. Alle Stile, jedes Level. Bald geht es los.',
       impressum: 'Impressum der Free Your Skill Agency, Philipp Müller, Hamburg.',
       datenschutz: 'Datenschutzerklärung der Free Your Skill Agency.'
@@ -235,7 +235,7 @@
     // ---- Conditional fields by Betreff (Unternehmen / Künstler / Privat) ----
     const BETREFF_LABELS = {
       unternehmen: 'Unternehmen / Marke',
-      kuenstler: 'Künstler / Artist',
+      kuenstler: 'Artist',
       privat: 'Privatperson',
       allgemein: 'Allgemeine Anfrage'
     };
@@ -343,7 +343,7 @@
     'Transparente Preise, keine versteckten Kosten': 'Transparent pricing, no hidden costs',
     'Content-Produktion aus einer Hand': 'Content production from a single source',
     'Als Unternehmen anfragen': 'Enquire as a company',
-    'Als Künstler': 'For Artists',
+    'Als Artist': 'For Artists',
     'Faire Vermittlung & transparente Konditionen': 'Fair placement & transparent terms',
     'Zugang zu spannenden Projekten & Events': 'Access to exciting projects & events',
     'Persönliche Betreuung & ehrliche Kommunikation': 'Personal support & honest communication',
@@ -377,7 +377,14 @@
       ', so you can focus on your skill while I handle the rest.',
     // Garantie
     'Garantie &': 'Guarantee &', 'keine Vertragsbindung': 'no lock-in',
-    'Alle Pakete und Einzelleistungen sind sowohl für Unternehmen, Agenturen, Talente jeglicher Art, als auch für Privatpersonen buchbar.':
+    // Testimonials
+    'Stimmen aus der Szene': 'Voices from the scene',
+    'Was andere': 'What others', 'sagen': 'say',
+    '„Man hat sich als Künstler jederzeit professionell betreut gefühlt. Besonders schön: Das Wohlergehen der Künstler steht klar im Vordergrund. Rückfragen wurden stets schnell und zuverlässig beantwortet. Eine rundum empfehlenswerte Zusammenarbeit!“':
+      '„As an artist, you always felt professionally supported. What’s especially nice: the artists’ wellbeing is clearly the priority. Questions were always answered quickly and reliably. A thoroughly recommendable collaboration!“',
+    'Musicaldarstellerin, Schauspielerin, Showgirl, Sängerin, Tänzerin, Choreografin & Model':
+      'Musical performer, actress, showgirl, singer, dancer, choreographer & model',
+    'Alle Pakete und Einzelleistungen sind sowohl für Unternehmen, Agenturen und Talente jeglicher Art als auch für Privatpersonen buchbar.':
       'All packages and individual services are bookable by companies, agencies, talents of any kind and private clients alike.',
     'Die Inhalte werden in einem kostenfreien Erstgespräch individuell abgestimmt und fair kalkuliert. Keine versteckten Kosten, keine Vertragsbindung.':
       'Everything is tailored in a free initial consultation and priced fairly. No hidden costs, no lock-in.',
@@ -390,7 +397,7 @@
     'Die Kosten hängen vom Umfang des Projekts ab. In einem kostenlosen Erstgespräch kläre ich alles und erstelle ein individuelles Angebot. Ich kalkuliere fair und transparent; der Einstieg ist schon im niedrigen dreistelligen Bereich möglich.':
       'Costs depend on the scope of the project. In a free initial consultation I clarify everything and create a tailored offer. I price fairly and transparently; entry is possible already in the low three-digit range.',
     'Für wen ist die Agentur geeignet?': 'Who is the agency for?',
-    'Für Unternehmen, Agenturen, Talente jeglicher Art und auch Privatpersonen. Ob du einen Künstler für dein Event brauchst oder als Künstler vermittelt werden möchtest: ich bin für dich da.':
+    'Für Unternehmen, Agenturen, Talente jeglicher Art und auch Privatpersonen. Ob du einen Artist für dein Event brauchst oder als Artist vermittelt werden möchtest: ich bin für dich da.':
       'For companies, agencies, talents of any kind and private clients too. Whether you need an artist for your event or want to be placed as an artist: I am here for you.',
     'Gibt es eine Vertragsbindung?': 'Is there a lock-in contract?',
     'Nein! Ich arbeite projektbasiert und ohne langfristige Vertragsbindung. Transparenz und Fairness stehen bei mir an erster Stelle.':
@@ -428,7 +435,7 @@
       'Free Your Skill is an agency for creative connections. I plan events, place talents and produce content, all from a single source.',
     'Kontaktieren': 'Get in touch',
     'Welche': 'Which', 'Formate': 'formats',
-    'Für welche Art von Events vermittelst du Künstler?': 'What kind of events do you place artists for?',
+    'Für welche Art von Events vermittelst du Artists?': 'What kind of events do you place artists for?',
     'Firmen-Events & Messen': 'Corporate events & trade fairs',
     'Kultur- & Kunst-Veranstaltungen': 'Cultural & art events',
     'Community-Events & Workshops': 'Community events & workshops',
@@ -437,7 +444,7 @@
     'Content- & Videoproduktionen': 'Content & video productions',
     'Der Mann': 'The man', 'dahinter': 'behind it',
     'Gründer & Kopf der Agentur': 'Founder & head of the agency',
-    'Mit Background als Künstler, Sales- & Eventmanager bringe ich Know-how von beiden Seiten mit. Seit 2009 in der Kreativszene als Artist & Creator.':
+    'Mit Background als Artist, Sales- & Eventmanager bringe ich Know-how von beiden Seiten mit. Seit 2009 in der Kreativszene als Artist & Creator.':
       'With a background as an artist, sales and event manager I bring know-how from both sides. In the creative scene as an artist & creator since 2009.',
     'Jahre Vertrieb & Kundenkontakt': 'years of sales & client contact',
     'Jahre Eventmanagement': 'years of event management',
