@@ -37,7 +37,7 @@
       datenschutz: 'Datenschutzerklärung der Free Your Skill Agency.'
     },
     en: {
-      home: 'Free Your Skill Agency from Hamburg, active nationwide: event planning, talent booking and content production from a single source.',
+      home: 'Free Your Skill from Hamburg: I connect creatives and clients and see projects through until they’re done. From the scene, for the scene. Fair and transparent.',
       agency: 'Event planning, booking and project support from a single source. The agency from within the scene in Hamburg, active nationwide. Fair, transparent, no lock-in.',
       about: 'Free Your Skill — founded by Philipp Müller. Artist, sales and event manager with over 15 years in the creative scene. From Hamburg, active nationwide.',
       tournament: 'The Free Your Skill Tournament is in preparation. All styles, every level. Coming soon.',
@@ -46,7 +46,15 @@
     }
   };
 
+  // OG-Description pro Sprache. Das statische Tag bleibt DE (Social-Scraper lesen ohne JS);
+  // im Browser aktualisiert applyLang() es bei Sprachwechsel.
+  const OG_DESCRIPTIONS = {
+    de: 'Ich verbinde Kreative und Auftraggeber und begleite Projekte, bis sie stehen. Aus der Szene, für die Szene.',
+    en: 'I connect creatives and clients and see projects through until they’re done. From the scene, for the scene.'
+  };
+
   const metaDesc = document.querySelector('meta[name="description"]');
+  const ogDesc = document.querySelector('meta[property="og:description"]');
   let currentLang = 'de';
 
   // Default highlighted nav link per view (used when no specific anchor is active)
@@ -536,6 +544,9 @@
     document.title = (TITLES[lang] && TITLES[lang][view]) || document.title;
     if (metaDesc && DESCRIPTIONS[lang] && DESCRIPTIONS[lang][view]) {
       metaDesc.setAttribute('content', DESCRIPTIONS[lang][view]);
+    }
+    if (ogDesc && OG_DESCRIPTIONS[lang]) {
+      ogDesc.setAttribute('content', OG_DESCRIPTIONS[lang]);
     }
     try { localStorage.setItem('fys-lang', lang); } catch (e) {}
   }
