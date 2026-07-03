@@ -29,7 +29,7 @@
 
   const DESCRIPTIONS = {
     de: {
-      home: 'Free Your Skill Agency aus Hamburg, deutschlandweit tätig: Eventplanung, Vermittlung von Talenten und Content-Produktion aus einer Hand.',
+      home: 'Free Your Skill aus Hamburg: Ich verbinde Kreative und Auftraggeber und begleite Projekte, bis sie stehen. Aus der Szene, für die Szene. Fair und transparent.',
       agency: 'Eventplanung, Vermittlung und Projekt-Support aus einer Hand. Die Agentur aus der Szene in Hamburg, deutschlandweit tätig. Fair, transparent, ohne Vertragsbindung.',
       about: 'Free Your Skill — gegründet von Philipp Müller. Artist, Sales- und Eventmanager mit über 15 Jahren in der Kreativszene. Aus Hamburg, deutschlandweit tätig.',
       tournament: 'Das Free Your Skill Tournament ist in Vorbereitung. Alle Stile, jedes Level. Bald geht es los.',
