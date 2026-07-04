@@ -386,16 +386,11 @@
     '„Transparent. Fair. Miteinander.“': '„Transparent. Fair. Together.“',
     '„Verstehen, bevor ich plane. Planen, bevor ich umsetze. Begleiten, auch nach dem Projekt.“':
       '„Understand before I plan. Plan before I execute. Support, even after the project.“',
-    // Troubleshooting
-    'Mein USP:': 'My USP:',
-    'Als': 'As an',
-    'Agentur aus der Szene': 'agency from within the scene',
-    'weiß ich, wo die typischen Fallstricke liegen. Mit': 'I know where the typical pitfalls lie. With',
-    'Know-how aus den Bereichen Kunst, Sales und Eventmanagement': 'know-how in art, sales and event management',
-    'antizipiere ich Probleme, bevor sie entstehen. Ich biete': 'I anticipate problems before they arise. I offer',
-    'verlässliche Umsetzung und klare Kommunikation': 'reliable execution and clear communication',
-    ', damit du dich auf deinen Skill konzentrieren kannst, während ich den Rest regle.':
-      ', so you can focus on your skill while I handle the rest.',
+    // USP — Einer für alles
+    'EINER FÜR': 'ONE FOR', 'ALLES': 'EVERYTHING',
+    'VON IDEE BIS UMSETZUNG.': 'FROM IDEA TO EXECUTION.',
+    'Ich bin nicht der Dienstleister, der bucht und sich verabschiedet. Ich bin der eine Ansprechpartner, der dein Netzwerk, deine Orga und dein Nervenkostüm zusammenhält, von der ersten Idee bis zur Umsetzung. Weil ich das Chaos der Szene selbst durchgemacht habe, bleibe ich dran. Kreativ, organisatorisch und persönlich.':
+      'I’m not the service provider who books you and disappears. I’m the one contact who keeps your network, your logistics and your sanity together, from the first idea to the finished project. Because I’ve lived the chaos of the scene myself, I stay on it. Creatively, organizationally and personally.',
     // Garantie
     'Garantie &': 'Guarantee &', 'keine Vertragsbindung': 'no lock-in',
     // Testimonials
