@@ -388,7 +388,8 @@
       '„Understand before I plan. Plan before I execute. Support, even after the project.“',
     // USP — Einer für alles
     'EINER FÜR': 'ONE FOR', 'ALLES': 'EVERYTHING',
-    'VON IDEE BIS UMSETZUNG.': 'FROM IDEA TO EXECUTION.',
+    '. VON IDEE BIS UMSETZUNG.': '. FROM IDEA TO EXECUTION.',
+    'Bereit': 'Ready to', 'loszulegen': 'Create',
     'Ich bin nicht der Dienstleister, der bucht und sich verabschiedet. Ich bin der eine Ansprechpartner, der dein Netzwerk, deine Orga und dein Nervenkostüm zusammenhält, von der ersten Idee bis zur Umsetzung. Weil ich das Chaos der Szene selbst durchgemacht habe, bleibe ich dran. Kreativ, organisatorisch und persönlich.':
       'I’m not the service provider who books you and disappears. I’m the one contact who keeps your network, your logistics and your sanity together, from the first idea to the finished project. Because I’ve lived the chaos of the scene myself, I stay on it. Creatively, organizationally and personally.',
     // Garantie

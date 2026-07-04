@@ -1757,6 +1757,24 @@ body[data-route="home"] .header { display: none; }
 .legal-back {
   margin-top: 3rem;
 }
+/* Datenschutz: DE/EN ueber html[lang]; Sub-Ueberschriften; Quelle */
+html[lang="en"] .ds-de { display: none; }
+html:not([lang="en"]) .ds-en { display: none; }
+.legal-block h3 {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--white);
+  margin: 1.5rem 0 0.5rem;
+}
+.legal-block h3:first-of-type { margin-top: 0.25rem; }
+.legal-source {
+  font-size: 0.8rem;
+  color: var(--gray);
+  margin-top: 2.5rem;
+}
+.legal-source a { color: var(--gray); }
 
 /* ============================================
    COMING SOON (Tournament)
@@ -1950,6 +1968,8 @@ body[data-route="home"] .header { display: none; }
   .header__inner { padding: 0 1.1rem; }
   .hero__title { font-size: clamp(2.6rem, 17vw, 4rem); }
   .hero__sub { font-size: 0.95rem; }
+  /* dezenter Verlauf hinter dem Hero-Textblock fuer bessere Lesbarkeit auf dem Foto */
+  .hero__content { background: radial-gradient(ellipse 130% 75% at 50% 42%, rgba(10,10,10,0.62) 0%, rgba(10,10,10,0.3) 55%, transparent 82%); }
   .mobile-nav__links a { font-size: 2rem; }
   .mobile-nav__links { gap: 1.5rem; }
   .section__title { font-size: clamp(1.85rem, 9.5vw, 2.6rem); }
