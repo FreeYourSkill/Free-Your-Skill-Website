@@ -460,13 +460,21 @@
     'Content- & Videoproduktionen': 'Content & video productions',
     'Der Mann': 'The man', 'dahinter': 'behind it',
     'Gründer & Kopf der Agentur': 'Founder & head of the agency',
-    'Mit Background als Artist, Sales- & Eventmanager bringe ich Know-how von beiden Seiten mit. Seit 2009 in der Kreativszene als Artist & Creator.':
-      'With a background as an artist, sales and event manager I bring know-how from both sides. In the creative scene as an artist & creator since 2009.',
+    'Ich bin keine Agentur, die von außen auf die Szene schaut. Ich bin Teil von ihr. Ich komme aus der Tanzszene und habe jahrelang selbst als Artist auf der Bühne gestanden. Heute liegt mein Fokus auf der anderen Seite, aber die Bühne und ihre Tücken kenne ich aus erster Hand, das Chaos, die Abhängigkeiten und die Unzuverlässigkeit dieser Branche.':
+      'I’m not an agency that looks at the scene from the outside. I’m part of it. I come from the dance scene and spent years on stage as an artist myself. Today my focus is on the other side, but I know the stage and its pitfalls first-hand: the chaos, the dependencies and the unreliability of this industry.',
+    'Mit Background als Artist, Sales- & Eventmanager bringe ich Know-how von beiden Seiten mit. Seit 2009 in der Kreativszene, als Artist, Creator und Supporter, auch wenn ich heute seltener selbst auftrete. Dazu kommen Eventtechnik und Eventmarketing. Genau dieses Wissen bündle ich an einem Ort, damit du dir den Stress sparst, mit dem ich mich selbst lange genug herumgeschlagen habe.':
+      'With a background as an artist, sales and event manager, I bring know-how from both sides. In the creative scene since 2009 as an artist, creator and supporter, even if I perform less often myself these days. On top of that come event tech and event marketing. I bundle exactly this knowledge in one place, so you’re spared the stress I struggled with for long enough myself.',
+    'Und das ist der Kern: Ich bin nicht der Dienstleister, der bucht und sich verabschiedet. Ich bin der eine Ansprechpartner, der dein Netzwerk, deine Orga und dein Nervenkostüm zusammenhält, von der ersten Idee bis zur Umsetzung. Weil ich das Chaos der Szene selbst durchgemacht habe, weißt du, dass ich dranbleibe, kreativ, organisatorisch und persönlich.':
+      'And that’s the core: I’m not the service provider who books you and disappears. I’m the one contact who keeps your network, your logistics and your sanity together, from the first idea to the finished project. Because I’ve lived the chaos of the scene myself, you know I’ll stay on it, creatively, organizationally and personally.',
+    'Keine drei Kontakte, keine endlosen Abstimmungsschleifen zwischen Kreation, Booking und Organisation.':
+      'No three contacts, no endless feedback loops between creation, booking and organization.',
+    'Ein starkes Netzwerk, gebündelt in einer Person, die an deiner Seite bleibt.':
+      'One strong network, bundled in one person who stays by your side.',
+    'Mein Motto: Each One Teach One. Ich glaube an echte Verbindungen zwischen Menschen, Projekten und Ideen, und daran, dass wir miteinander weiterkommen als gegeneinander. Lass mal connecten.':
+      'My motto: Each One Teach One. I believe in real connections between people, projects and ideas, and that we get further together than against each other. Let’s connect.',
     'Jahre Vertrieb & Kundenkontakt': 'years of sales & client contact',
     'Jahre Eventmanagement': 'years of event management',
     'Jahre in der Kreativszene': 'years in the creative scene',
-    'Ich bin nicht irgendeine Agentur. Ich bin Teil der Szene.': 'I am not just any agency. I am part of the scene.',
-    '„Ich bin nicht irgendeine Agentur. Ich bin Teil der Szene.“': '„I am not just any agency. I am part of the scene.“',
     'Folge mir auf': 'Follow me on',
     'Anfragen': 'Enquire', 'Bewerben': 'Apply',
     // Tournament coming soon

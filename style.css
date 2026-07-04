@@ -924,7 +924,7 @@ body[data-route="home"] .header { display: none; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  align-items: center;
+  align-items: start;
 }
 .about-hero__image-col {
   position: relative;
@@ -952,6 +952,23 @@ body[data-route="home"] .header { display: none; }
   font-style: italic;
   color: var(--white-dim);
   line-height: 1.5;
+}
+
+/* Bio-Absätze + Pull-Quote in "Der Mann dahinter" */
+.about-hero__text-col p:not(.about-hero__role) {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  color: var(--white-dim);
+}
+.about-hero__pullquote {
+  margin: 0.5rem 0 1.5rem;
+  padding-left: 1.25rem;
+  border-left: 3px solid var(--pink);
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--white);
 }
 
 .about-hero__name {
