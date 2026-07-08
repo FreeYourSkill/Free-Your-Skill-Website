@@ -393,7 +393,7 @@
     'Ich bin nicht der Dienstleister, der bucht und sich verabschiedet. Ich bin der eine Ansprechpartner, der dein Netzwerk, deine Orga und dein Nervenkostüm zusammenhält, von der ersten Idee bis zur Umsetzung. Weil ich das Chaos der Szene selbst durchgemacht habe, bleibe ich dran. Kreativ, organisatorisch und persönlich.':
       'I’m not the service provider who books you and disappears. I’m the one contact who keeps your network, your logistics and your sanity together, from the first idea to the finished project. Because I’ve lived the chaos of the scene myself, I stay on it. Creatively, organizationally and personally.',
     // Garantie
-    'Garantie &': 'Guarantee &', 'keine Vertragsbindung': 'no lock-in',
+    'Klare Absprachen,': 'Clear Terms,', 'Deine Entscheidung': 'Your Call',
     // Testimonials
     'Stimmen aus der Szene': 'Voices from the scene',
     'Was andere': 'What others', 'sagen': 'say',
@@ -401,10 +401,10 @@
       '„As an artist, you always felt professionally supported. What’s especially nice: the artists’ wellbeing is clearly the priority. Questions were always answered quickly and reliably. A thoroughly recommendable collaboration!“',
     'Musicaldarstellerin, Schauspielerin, Showgirl, Sängerin, Tänzerin, Choreografin & Model':
       'Musical performer, actress, showgirl, singer, dancer, choreographer & model',
-    'Alle Pakete und Einzelleistungen sind sowohl für Unternehmen, Agenturen und Talente jeglicher Art als auch für Privatpersonen buchbar.':
-      'All packages and individual services are bookable by companies, agencies, talents of any kind and private clients alike.',
-    'Die Inhalte werden in einem kostenfreien Erstgespräch individuell abgestimmt und fair kalkuliert. Keine versteckten Kosten, keine Vertragsbindung.':
-      'Everything is tailored in a free initial consultation and priced fairly. No hidden costs, no lock-in.',
+    'Alle Pakete und Einzelleistungen sind für Unternehmen, Agenturen, Talente und Privatpersonen buchbar.':
+      'All packages and individual services can be booked by companies, agencies, talents and private individuals.',
+    'Wir klären alles in einem kostenfreien Erstgespräch, und ich kalkuliere fair. Keine versteckten Kosten, keine langfristige Bindung. Eine exklusive Zusammenarbeit ist möglich, wenn du sie willst, aber kein Muss, das entscheidest du. Was ich für dich vermittle, halten wir vorher offen und schriftlich fest, fair für alle Seiten. Du bleibst frei in deinen Entscheidungen.':
+      'We sort everything out in a free initial consultation, and I calculate fairly. No hidden costs, no long-term commitment. An exclusive collaboration is possible if you want it, but it’s not a must, that’s your call. Whatever I arrange for you, we put down openly and in writing beforehand, fair for all sides. You stay free in your decisions.',
     // FAQ
     'Häufig gestellte': 'Frequently asked', 'Fragen': 'questions',
     'Wer bist, was machst du, was habe ich davon?': 'Who are you, what do you do, what is in it for me?',
