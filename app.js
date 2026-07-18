@@ -477,6 +477,11 @@
     'Jahre Eventmanagement': 'years of event management',
     'Jahre in der Kreativszene': 'years in the creative scene',
     'Folge mir auf': 'Follow me on',
+    'Hier zeige ich meine aktuellen Instagram-Beiträge. Zum Laden wird eine Verbindung zu Instagram/Meta (USA) hergestellt, dabei kann deine IP-Adresse übertragen werden.':
+      'Here I show my current Instagram posts. Loading them establishes a connection to Instagram/Meta (USA), and your IP address may be transmitted.',
+    'Mehr in der Datenschutzerklärung': 'See our privacy policy',
+    'Auswahl merken': 'Remember my choice',
+    'Instagram-Beiträge laden': 'Load Instagram posts',
     'Anfragen': 'Enquire', 'Bewerben': 'Apply',
     // Tournament coming soon
     'Mein Online-Turnier ist in Vorbereitung. Alle Stile, jedes Level, die Community kommt zusammen. Bald geht’s los.':
