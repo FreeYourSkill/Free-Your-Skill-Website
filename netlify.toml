@@ -1,0 +1,65 @@
+# ============================================
+# FREE YOUR SKILL — Netlify Build & Redirects
+# ============================================
+# build.js erzeugt aus index.html echte Seiten mit sauberen URLs nach dist/.
+
+[build]
+  command = "node build.js"
+  publish = "dist"
+
+# ---- Alte statische Fallback-Seiten -> neue saubere URLs ----
+[[redirects]]
+  from = "/about.html"
+  to = "/about/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/agency.html"
+  to = "/agency/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/impressum.html"
+  to = "/impressum/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/datenschutz.html"
+  to = "/datenschutz/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+# ---- Ohne Trailing Slash ebenfalls sauber erreichbar ----
+[[redirects]]
+  from = "/about"
+  to = "/about/"
+  status = 301
+
+[[redirects]]
+  from = "/agency"
+  to = "/agency/"
+  status = 301
+
+[[redirects]]
+  from = "/tournament"
+  to = "/tournament/"
+  status = 301
+
+[[redirects]]
+  from = "/impressum"
+  to = "/impressum/"
+  status = 301
+
+[[redirects]]
+  from = "/datenschutz"
+  to = "/datenschutz/"
+  status = 301

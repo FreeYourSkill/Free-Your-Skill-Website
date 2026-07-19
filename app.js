@@ -8,6 +8,21 @@
 
   const VIEWS = ['home', 'agency', 'about', 'tournament', 'impressum', 'datenschutz'];
 
+  // Saubere URLs pro View (Multipage-Build). Auch fuer die Hash-Umleitung genutzt.
+  const ROUTE_URLS = {
+    home: '/',
+    agency: '/agency/',
+    about: '/about/',
+    tournament: '/tournament/',
+    impressum: '/impressum/',
+    datenschutz: '/datenschutz/'
+  };
+
+  // Multipage-Modus: build.js erzeugt pro Route eine eigene Seite und setzt <body data-page="...">.
+  // Ohne data-page laeuft die Quelldatei index.html unveraendert als Hash-SPA weiter.
+  const PAGE = document.body ? document.body.getAttribute('data-page') : null;
+  const isMultiPage = !!PAGE && VIEWS.indexOf(PAGE) !== -1;
+
   const TITLES = {
     de: {
       home: 'Free Your Skill — Verbinden, Planen, Supporten aus Hamburg',
@@ -79,6 +94,11 @@
     const anchor = parts[1] || null;
     if (!VIEWS.includes(view)) view = 'home';
     return { view, anchor };
+  }
+
+  // Aktive View: im Multipage-Modus aus <body data-page>, sonst aus dem Hash.
+  function currentView() {
+    return isMultiPage ? PAGE : parseHash().view;
   }
 
   /* ---- FOOTER INJECTION (once per view) ---- */
@@ -336,6 +356,7 @@
     // Intro / splash
     'VERBINDEN · PLANEN · SUPPORTEN': 'CONNECT · PLAN · SUPPORT',
     'Impressum': 'Imprint', 'Datenschutz': 'Privacy',
+    'Datenschutzerklärung': 'Privacy Policy',
     // Hero
     'Befreie deinen': 'Free your',
     'Große Pläne, aber allein kommst du nicht weiter? Ich verbinde, plane und zieh dein Projekt mit dir durch. Aus der Szene, für die Szene.':
@@ -549,7 +570,7 @@
     });
     // html lang + title/meta for current route
     document.documentElement.setAttribute('lang', lang);
-    const { view } = parseHash();
+    const view = currentView();
     document.title = (TITLES[lang] && TITLES[lang][view]) || document.title;
     if (metaDesc && DESCRIPTIONS[lang] && DESCRIPTIONS[lang][view]) {
       metaDesc.setAttribute('content', DESCRIPTIONS[lang][view]);
@@ -588,6 +609,35 @@
     });
   }
 
+  /* ---- MULTIPAGE INIT (eine View pro Seite, saubere URL, kein Hash-Router) ---- */
+  function initMultiPage() {
+    const target = document.querySelector('#app [data-view]');
+    if (target) {
+      target.classList.add('view--active');
+      observeRevealsIn(target);
+    }
+    // Nav-Highlight anhand des Pfads (z. B. /agency/ -> "Leistungen"/"FAQ" gehoeren zu /agency/)
+    const path = window.location.pathname.replace(/index\.html$/, '');
+    document.querySelectorAll('.header__link').forEach(link => {
+      const base = (link.getAttribute('href') || '').split('#')[0];
+      link.classList.toggle('header__link--active', base === path);
+    });
+    // Anker beim Direktaufruf ansteuern (z. B. /agency/#kontakt), mit Header-Offset
+    const hash = window.location.hash;
+    if (hash && hash.length > 1 && hash.indexOf('#/') !== 0) {
+      requestAnimationFrame(() => {
+        let el = null;
+        try { el = document.getElementById(decodeURIComponent(hash.slice(1))); } catch (e) {}
+        if (el) {
+          const offset = header ? header.offsetHeight + 20 : 0;
+          const top = el.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top: Math.max(top, 0), behavior: 'smooth' });
+        }
+      });
+    }
+    onScroll();
+  }
+
   /* ---- INIT ---- */
   function init() {
     setupReveal();
@@ -603,11 +653,16 @@
     });
 
     window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('hashchange', route);
 
-    // normalize empty hash to home
-    if (!window.location.hash) window.location.replace('#/');
-    route();
+    if (isMultiPage) {
+      // Echte Seiten mit sauberen URLs: kein Hash-Router, kein Hash-Normalisieren.
+      initMultiPage();
+    } else {
+      window.addEventListener('hashchange', route);
+      // normalize empty hash to home
+      if (!window.location.hash) window.location.replace('#/');
+      route();
+    }
   }
 
   if (document.readyState === 'loading') {
