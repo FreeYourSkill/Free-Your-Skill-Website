@@ -189,6 +189,11 @@ body[data-route="home"] .header { display: none; }
 }
 .intro.view--active .intro__card:hover .intro__card-label { color: var(--pink); }
 
+/* Anker-Ziele (z. B. /agency/#kontakt): Sticky-Header nicht ueber die Ueberschrift legen */
+#leistungen,
+#faq,
+#kontakt { scroll-margin-top: 90px; }
+
 /* View entry transition */
 @keyframes viewIn {
   from { opacity: 0; transform: translateY(18px); }

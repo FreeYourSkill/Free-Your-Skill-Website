@@ -8,3 +8,6 @@ node_modules/
 
 # Local dev artifacts (not part of the deployable site)
 screenshots/
+
+# Build output (wird von build.js erzeugt, Netlify baut selbst)
+dist/
