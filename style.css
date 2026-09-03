@@ -922,6 +922,121 @@ body[data-route="home"] .header { display: none; }
   color: var(--gray);
 }
 
+/* ---- TESTIMONIALS: 3D-COVERFLOW-KARUSSELL ----
+   Ersetzt die gestapelte Kartenliste. Iteriert generisch ueber alle
+   .testimonial-Karten im Track (siehe app.js initTestimonialsCarousel) —
+   keine feste Anzahl. Zustand pro Karte wird per data-state gesteuert:
+   active | prev | next | far. */
+.testimonials__carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.5rem, 2vw, 1.5rem);
+}
+.testimonials__viewport {
+  position: relative;
+  overflow: hidden;
+  perspective: 1400px;
+  width: min(920px, 100%);
+  padding: 1rem 0;
+}
+.testimonials__track {
+  display: grid;
+  justify-items: center;
+}
+.testimonials__track .testimonial {
+  grid-area: 1 / 1;
+  width: min(380px, 78vw);
+  margin: 0 auto;
+  opacity: 0;
+  transition: transform 0.7s var(--ease-out), opacity 0.7s var(--ease-out);
+  will-change: transform, opacity;
+}
+/* Fallback ohne JS: erste Karte sichtbar, Rest ausgeblendet */
+.testimonials__track .testimonial:first-child { opacity: 1; }
+
+.testimonials__track .testimonial[data-state="active"] {
+  transform: translateX(0) rotateY(0deg) scale(1);
+  opacity: 1;
+  z-index: 3;
+  pointer-events: auto;
+}
+.testimonials__track .testimonial[data-state="prev"] {
+  transform: translateX(-60%) rotateY(18deg) scale(0.66);
+  opacity: 0.3;
+  z-index: 2;
+  pointer-events: none;
+}
+.testimonials__track .testimonial[data-state="next"] {
+  transform: translateX(60%) rotateY(-18deg) scale(0.66);
+  opacity: 0.3;
+  z-index: 2;
+  pointer-events: none;
+}
+.testimonials__track .testimonial[data-state="far"] {
+  transform: translateX(0) scale(0.5);
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .testimonials__track .testimonial { transition: none; }
+}
+
+/* Weicher Verlauf an den Raendern, Nachbarn verblassen in den Hintergrund */
+.testimonials__fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: clamp(50px, 12vw, 140px);
+  pointer-events: none;
+  z-index: 4;
+}
+.testimonials__fade--left {
+  left: 0;
+  background: linear-gradient(to right, var(--black) 0%, transparent 100%);
+}
+.testimonials__fade--right {
+  right: 0;
+  background: linear-gradient(to left, var(--black) 0%, transparent 100%);
+}
+
+.testimonials__arrow {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.15);
+  color: var(--white-dim);
+  cursor: pointer;
+  transition: border-color 0.35s, color 0.35s, transform 0.35s;
+  z-index: 5;
+}
+.testimonials__arrow:hover,
+.testimonials__arrow:focus-visible {
+  border-color: var(--pink);
+  color: var(--pink);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 720px) {
+  .testimonials__viewport { padding: 0.5rem 0; }
+  .testimonials__track .testimonial[data-state="prev"] {
+    transform: translateX(-46%) rotateY(18deg) scale(0.6);
+    opacity: 0.18;
+  }
+  .testimonials__track .testimonial[data-state="next"] {
+    transform: translateX(46%) rotateY(-18deg) scale(0.6);
+    opacity: 0.18;
+  }
+  .testimonials__arrow { width: 38px; height: 38px; }
+  .testimonials__fade { width: clamp(30px, 14vw, 70px); }
+}
+
 /* ============================================
    ABOUT HERO
    ============================================ */

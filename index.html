@@ -311,8 +311,10 @@
       </section>
 
       <!-- ============================================ -->
-      <!-- TESTIMONIALS — Stimmen aus der Szene
-           Weitere Eintraege: eine <figure class="testimonial"> ... </figure> kopieren.
+      <!-- TESTIMONIALS — Stimmen aus der Szene (3D-Coverflow-Karussell)
+           Weitere Eintraege: eine <figure class="testimonial"> ... </figure> in .testimonials__track kopieren.
+           Das Karussell (app.js: initTestimonialsCarousel) iteriert automatisch ueber
+           alle .testimonial-Karten im Track, keine Anpassung an der Logik noetig.
            Der Bildrahmen (.testimonial__frame) gilt fuer Foto UND Logo gleichermassen.
            Bilder vorab quadratisch aufbereiten (z.B. 224x224, <100 KB); object-fit deckt ab. -->
       <!-- ============================================ -->
@@ -322,7 +324,12 @@
             <span class="section__eyebrow">Stimmen aus der Szene</span>
             <h2 class="section__title section__title--center">Was andere <span class="accent-pink">sagen</span></h2>
           </div>
-          <div class="testimonials__grid" data-reveal>
+          <div class="testimonials__carousel" id="testimonialsCarousel" data-reveal>
+            <button type="button" class="testimonials__arrow testimonials__arrow--prev" id="testimonialsPrev" aria-label="Vorheriges Testimonial / Previous testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <div class="testimonials__viewport" id="testimonialsViewport">
+              <div class="testimonials__track" id="testimonialsTrack">
 
             <figure class="testimonial">
               <blockquote class="testimonial__quote">&bdquo;Man hat sich als Künstler jederzeit professionell betreut gefühlt. Besonders schön: Das Wohlergehen der Künstler steht klar im Vordergrund. Rückfragen wurden stets schnell und zuverlässig beantwortet. Eine rundum empfehlenswerte Zusammenarbeit!&ldquo;</blockquote>
@@ -363,6 +370,13 @@
               </figcaption>
             </figure>
 
+              </div>
+              <div class="testimonials__fade testimonials__fade--left" aria-hidden="true"></div>
+              <div class="testimonials__fade testimonials__fade--right" aria-hidden="true"></div>
+            </div>
+            <button type="button" class="testimonials__arrow testimonials__arrow--next" id="testimonialsNext" aria-label="Nächstes Testimonial / Next testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
           </div>
         </div>
       </section>

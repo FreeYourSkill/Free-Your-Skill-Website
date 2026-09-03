@@ -644,6 +644,95 @@
     onScroll();
   }
 
+  /* ---- TESTIMONIALS: 3D-COVERFLOW-KARUSSELL ----
+     Iteriert generisch ueber alle .testimonial-Karten im Track (keine feste
+     Anzahl, neue Karten in der Quelle werden automatisch Teil des Karussells).
+     Steuert nur data-state/aria-hidden auf den bestehenden Karten — fasst
+     Text/Bilder/DICT nicht an, stoert die TreeWalker-Uebersetzung also nicht. */
+  function initTestimonialsCarousel() {
+    const carousel = document.getElementById('testimonialsCarousel');
+    const track = document.getElementById('testimonialsTrack');
+    const prevBtn = document.getElementById('testimonialsPrev');
+    const nextBtn = document.getElementById('testimonialsNext');
+    if (!carousel || !track) return;
+
+    const cards = Array.prototype.slice.call(track.querySelectorAll(':scope > .testimonial'));
+    if (cards.length === 0) return;
+
+    const AUTOPLAY_MS = 6500;
+    const reduceMotion = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+
+    let active = 0;
+    let timer = null;
+
+    function render() {
+      const n = cards.length;
+      cards.forEach((card, i) => {
+        let diff = i - active;
+        if (diff > n / 2) diff -= n;
+        if (diff < -n / 2) diff += n;
+
+        let state;
+        if (diff === 0) state = 'active';
+        else if (diff === -1 || (n === 2 && diff === 1)) state = 'prev';
+        else if (diff === 1) state = 'next';
+        else state = 'far';
+
+        card.dataset.state = state;
+        card.setAttribute('aria-hidden', state === 'active' ? 'false' : 'true');
+      });
+    }
+
+    function goTo(i) {
+      const n = cards.length;
+      active = ((i % n) + n) % n;
+      render();
+    }
+    function next() { goTo(active + 1); restartAutoplay(); }
+    function prev() { goTo(active - 1); restartAutoplay(); }
+
+    function stopAutoplay() {
+      if (timer) { clearInterval(timer); timer = null; }
+    }
+    function startAutoplay() {
+      if (reduceMotion || cards.length < 2) return;
+      stopAutoplay();
+      timer = setInterval(() => { goTo(active + 1); }, AUTOPLAY_MS);
+    }
+    function restartAutoplay() {
+      if (reduceMotion) return;
+      startAutoplay();
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', prev);
+    if (nextBtn) nextBtn.addEventListener('click', next);
+
+    // Pausiert Autoplay, sobald die Maus ueber der Sektion ist
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+    if (prevBtn) prevBtn.addEventListener('focus', stopAutoplay);
+    if (nextBtn) nextBtn.addEventListener('focus', stopAutoplay);
+    if (prevBtn) prevBtn.addEventListener('blur', restartAutoplay);
+    if (nextBtn) nextBtn.addEventListener('blur', restartAutoplay);
+
+    // Wischen (Touch)
+    let touchStartX = null;
+    carousel.addEventListener('touchstart', (e) => {
+      touchStartX = e.touches[0].clientX;
+      stopAutoplay();
+    }, { passive: true });
+    carousel.addEventListener('touchend', (e) => {
+      if (touchStartX == null) return;
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 40) { dx < 0 ? next() : prev(); }
+      else { restartAutoplay(); }
+      touchStartX = null;
+    }, { passive: true });
+
+    render();
+    startAutoplay();
+  }
+
   /* ---- INIT ---- */
   function init() {
     setupReveal();
@@ -653,6 +742,7 @@
     initContactForm();
     initLinks();
     initLang();
+    initTestimonialsCarousel();
 
     if (burger) burger.addEventListener('click', () => {
       mobileNav.classList.contains('open') ? closeMobileNav() : openMobileNav();
