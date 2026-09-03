@@ -664,6 +664,8 @@
 
     let active = 0;
     let timer = null;
+    let isHovering = false;
+    let isFocused = false;
 
     function render() {
       const n = cards.length;
@@ -679,7 +681,20 @@
         else state = 'far';
 
         card.dataset.state = state;
-        card.setAttribute('aria-hidden', state === 'active' ? 'false' : 'true');
+        // prev/next sind sichtbar UND anklickbar -> nicht vor Screenreadern/Tastatur verstecken.
+        // Nur die unsichtbaren "far"-Karten (bei >3 Testimonials) bleiben ausgeblendet.
+        const clickable = state === 'prev' || state === 'next';
+        card.setAttribute('aria-hidden', state === 'far' ? 'true' : 'false');
+        if (clickable) {
+          card.setAttribute('role', 'button');
+          card.setAttribute('tabindex', '0');
+          card.setAttribute('aria-label',
+            (state === 'prev' ? 'Vorheriges Testimonial anzeigen / Show previous testimonial' : 'Nächstes Testimonial anzeigen / Show next testimonial'));
+        } else {
+          card.removeAttribute('role');
+          card.removeAttribute('aria-label');
+          card.setAttribute('tabindex', '-1');
+        }
       });
     }
 
@@ -688,32 +703,45 @@
       active = ((i % n) + n) % n;
       render();
     }
-    function next() { goTo(active + 1); restartAutoplay(); }
-    function prev() { goTo(active - 1); restartAutoplay(); }
+    // Nach manueller Navigation nur weiterlaufen lassen, wenn gerade NICHT
+    // gehovert/fokussiert wird — sonst bliebe es beim Hover ja nicht wirklich stehen.
+    function next() { goTo(active + 1); startAutoplay(); }
+    function prev() { goTo(active - 1); startAutoplay(); }
 
     function stopAutoplay() {
       if (timer) { clearInterval(timer); timer = null; }
     }
     function startAutoplay() {
-      if (reduceMotion || cards.length < 2) return;
       stopAutoplay();
+      if (reduceMotion || cards.length < 2 || isHovering || isFocused) return;
       timer = setInterval(() => { goTo(active + 1); }, AUTOPLAY_MS);
-    }
-    function restartAutoplay() {
-      if (reduceMotion) return;
-      startAutoplay();
     }
 
     if (prevBtn) prevBtn.addEventListener('click', prev);
     if (nextBtn) nextBtn.addEventListener('click', next);
 
-    // Pausiert Autoplay, sobald die Maus ueber der Sektion ist
-    carousel.addEventListener('mouseenter', stopAutoplay);
-    carousel.addEventListener('mouseleave', startAutoplay);
-    if (prevBtn) prevBtn.addEventListener('focus', stopAutoplay);
-    if (nextBtn) nextBtn.addEventListener('focus', stopAutoplay);
-    if (prevBtn) prevBtn.addEventListener('blur', restartAutoplay);
-    if (nextBtn) nextBtn.addEventListener('blur', restartAutoplay);
+    // Klick auf eine sichtbare Nachbar-Karte (links/rechts im Hintergrund) wechselt zu ihr
+    track.addEventListener('click', (e) => {
+      const card = e.target.closest('.testimonial');
+      if (!card) return;
+      if (card.dataset.state === 'prev') prev();
+      else if (card.dataset.state === 'next') next();
+    });
+    track.addEventListener('keydown', (e) => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      const card = e.target.closest('.testimonial');
+      if (!card) return;
+      if (card.dataset.state === 'prev') { e.preventDefault(); prev(); }
+      else if (card.dataset.state === 'next') { e.preventDefault(); next(); }
+    });
+
+    // Pausiert Autoplay, solange die Maus ueber der Sektion ist oder ein
+    // Pfeil/eine Nachbar-Karte den Fokus haelt — bleibt dabei wirklich stehen,
+    // auch wenn zwischendurch geklickt wird (kein automatischer Neustart).
+    carousel.addEventListener('mouseenter', () => { isHovering = true; stopAutoplay(); });
+    carousel.addEventListener('mouseleave', () => { isHovering = false; startAutoplay(); });
+    carousel.addEventListener('focusin', () => { isFocused = true; stopAutoplay(); });
+    carousel.addEventListener('focusout', () => { isFocused = false; startAutoplay(); });
 
     // Wischen (Touch)
     let touchStartX = null;
@@ -725,7 +753,7 @@
       if (touchStartX == null) return;
       const dx = e.changedTouches[0].clientX - touchStartX;
       if (Math.abs(dx) > 40) { dx < 0 ? next() : prev(); }
-      else { restartAutoplay(); }
+      else { startAutoplay(); }
       touchStartX = null;
     }, { passive: true });
 

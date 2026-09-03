@@ -961,17 +961,30 @@ body[data-route="home"] .header { display: none; }
   z-index: 3;
   pointer-events: auto;
 }
-.testimonials__track .testimonial[data-state="prev"] {
-  transform: translateX(-60%) rotateY(18deg) scale(0.66);
+.testimonials__track .testimonial[data-state="prev"],
+.testimonials__track .testimonial[data-state="next"] {
   opacity: 0.3;
   z-index: 2;
-  pointer-events: none;
+  /* anklickbar: wechselt zu dieser Karte (siehe app.js initTestimonialsCarousel) */
+  cursor: pointer;
+  pointer-events: auto;
+}
+.testimonials__track .testimonial[data-state="prev"] {
+  transform: translateX(-60%) rotateY(18deg) scale(0.66);
 }
 .testimonials__track .testimonial[data-state="next"] {
   transform: translateX(60%) rotateY(-18deg) scale(0.66);
-  opacity: 0.3;
-  z-index: 2;
-  pointer-events: none;
+}
+.testimonials__track .testimonial[data-state="prev"]:hover,
+.testimonials__track .testimonial[data-state="next"]:hover,
+.testimonials__track .testimonial[data-state="prev"]:focus-visible,
+.testimonials__track .testimonial[data-state="next"]:focus-visible {
+  opacity: 0.55;
+}
+.testimonials__track .testimonial[data-state="prev"]:focus-visible,
+.testimonials__track .testimonial[data-state="next"]:focus-visible {
+  outline: 2px solid var(--pink);
+  outline-offset: 4px;
 }
 .testimonials__track .testimonial[data-state="far"] {
   transform: translateX(0) scale(0.5);
