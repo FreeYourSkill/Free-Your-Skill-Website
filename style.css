@@ -11,6 +11,7 @@
   --teal-dark: #5a9a9a;
   --blue: #2E5984;
   --blue-dark: #1d3d5c;
+  --blue-light: #6fa8dc;
   --black: #0a0a0a;
   --black-light: #141414;
   --black-card: #1a1a1a;
@@ -629,7 +630,7 @@ body[data-route="home"] .header { display: none; }
 }
 .vorteile-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -647,6 +648,7 @@ body[data-route="home"] .header { display: none; }
 }
 .vorteile-card--pink::before { background: var(--pink); }
 .vorteile-card--teal::before { background: var(--teal); }
+.vorteile-card--blue::before { background: var(--blue); }
 
 .vorteile-card h3 {
   font-family: var(--font-heading);
@@ -658,6 +660,7 @@ body[data-route="home"] .header { display: none; }
 }
 .vorteile-card--pink h3 { color: var(--pink); }
 .vorteile-card--teal h3 { color: var(--teal); }
+.vorteile-card--blue h3 { color: var(--blue-light); }
 
 .vorteile-card ul {
   list-style: none;
@@ -681,6 +684,7 @@ body[data-route="home"] .header { display: none; }
 }
 .vorteile-card--pink li::before { background: var(--pink); }
 .vorteile-card--teal li::before { background: var(--teal); }
+.vorteile-card--blue li::before { background: var(--blue-light); }
 
 /* ============================================
    PROZESS STEPS
@@ -1308,7 +1312,7 @@ body[data-route="home"] .header { display: none; }
 
 .dual-cta {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   min-height: 400px;
 }
 .dual-cta__card {
@@ -1329,6 +1333,15 @@ body[data-route="home"] .header { display: none; }
 .dual-cta__card:hover .dual-cta__bg {
   filter: grayscale(50%) brightness(0.4);
   transform: scale(1.05);
+}
+/* Karte ohne Foto (z.B. solange kein passendes Motiv vorhanden ist):
+   dezenter dunkler Verlauf mit Blau-Akzent statt Bild. */
+.dual-cta__card--noimg {
+  background: radial-gradient(circle at 30% 20%, var(--blue-dark) 0%, var(--black) 70%);
+  transition: background 0.6s;
+}
+.dual-cta__card--noimg:hover {
+  background: radial-gradient(circle at 30% 20%, var(--blue) 0%, var(--black-light) 70%);
 }
 .dual-cta__overlay {
   position: absolute; inset: 0;
@@ -1826,6 +1839,8 @@ body[data-route="home"] .header { display: none; }
 @media (max-width: 1024px) {
   .keyfacts { grid-template-columns: repeat(3, 1fr); }
   .footer__grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .vorteile-grid { grid-template-columns: 1fr 1fr; }
+  .dual-cta { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 768px) {

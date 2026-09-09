@@ -264,6 +264,7 @@
     const BETREFF_LABELS = {
       unternehmen: 'Unternehmen / Marke',
       kuenstler: 'Artist',
+      dienstleister: 'Dienstleister / Fachkraft',
       privat: 'Privatperson',
       allgemein: 'Allgemeine Anfrage'
     };
@@ -364,27 +365,27 @@
     'LASS MAL CONNECTEN!': 'LET’S CONNECT!',
     // Was macht FYS
     'Was macht': 'What is',
-    'Eine Agentur für kreative Verbindungen, mit klarer Kommunikation und verlässlicher Umsetzung. Ich bringe Talente, Auftraggebende und Projekte zusammen: fair, professionell und auf Augenhöhe.':
-      'An agency for creative connections, with clear communication and reliable execution. I bring talents, clients and projects together: fair, professional and on equal footing.',
+    'Eine Agentur für kreative Verbindungen, mit klarer Kommunikation und verlässlicher Umsetzung. Ich bringe Talente, Dienstleister, Auftraggebende und Projekte zusammen: fair, professionell und auf Augenhöhe.':
+      'An agency for creative connections, with clear communication and reliable execution. I bring talents, service providers, clients and projects together: fair, professional and on equal footing.',
     'Eventplanung': 'Event Planning',
     'Von Konzept bis Durchführung, live und digital: Firmen-Events, Messen, Festivals, Community-Events und Workshops. Ich plane und realisiere Events, die wirken.':
       'From concept to delivery, live and digital: corporate events, trade fairs, festivals, community events and workshops. I plan and deliver events that work.',
     'Vermittlung': 'Booking & Placement',
-    'Ich verbinde Talente mit Auftraggebenden: Tänzer, Musiker, Artists, Moderatoren und Creator. Passend, fair und auf Augenhöhe.':
-      'I connect talents with clients: dancers, musicians, artists, hosts and creators. A good fit, fair and on equal footing.',
+    'Ich verbinde dich mit den richtigen Leuten: Artists aus Tanz, Musik und Moderation, dazu Creator, Dienstleister und Fachkräfte etwa für Foto, Video, Technik oder Web. Passend, fair und auf Augenhöhe.':
+      'I connect you with the right people: artists in dance, music and hosting, plus creators, service providers and specialists for photo, video, tech or web, for example. A good fit, fair and on equal footing.',
     'Projekt-Support': 'Project Support',
-    'Beratung, Content- und Videoproduktion, Foto und Livestreaming: ich begleite dein Projekt von A bis Z, auch nach dem Event.':
-      'Consulting, content and video production, photo and livestreaming: I support your project from A to Z, even after the event.',
+    'Projektassistenz und Beratung, Content-, Video- und Fotoproduktion, Livestreaming: ich manage und begleite dein Projekt von A bis Z, auch nach dem Event.':
+      'Project assistance and consulting, content, video and photo production, livestreaming: I manage and support your project from A to Z, even after the event.',
     'Über mich erfahren': 'Learn about me',
     // Vorteile
     'Vorteile der': 'Benefits of', 'Zusammenarbeit': 'working together',
-    'Als Unternehmen': 'For Companies',
+    'Als Auftraggeber (Unternehmen & Privatpersonen)': 'For Clients (Companies & Private Individuals)',
     'Zugang zu einem kuratierten Talent-Netzwerk': 'Access to a curated talent network',
     'Zuverlässige Planung & Durchführung': 'Reliable planning & delivery',
     'Ein Ansprechpartner für alles': 'One contact for everything',
     'Transparente Preise, keine versteckten Kosten': 'Transparent pricing, no hidden costs',
     'Content-Produktion aus einer Hand': 'Content production from a single source',
-    'Als Unternehmen anfragen': 'Enquire as a company',
+    'Als Auftraggeber anfragen': 'Enquire as a client',
     'Als Artist': 'For Artists',
     'Faire Vermittlung & transparente Konditionen': 'Fair placement & transparent terms',
     'Zugang zu spannenden Projekten & Events': 'Access to exciting projects & events',
@@ -392,6 +393,13 @@
     'Unterstützung bei Selbstvermarktung': 'Support with self-marketing',
     'Community & Netzwerk': 'Community & network',
     'Als Artist bewerben': 'Apply as an artist',
+    'Als Dienstleister': 'For Service Providers',
+    'Passende Projekte statt Kaltakquise': 'Fitting projects instead of cold outreach',
+    'Faire, transparente Konditionen': 'Fair, transparent terms',
+    'Ein verlässlicher Partner statt anonymer Plattform': 'A reliable partner instead of an anonymous platform',
+    'Zugang zu Auftraggebern und Netzwerk': 'Access to clients and network',
+    'Du lieferst dein Handwerk, ich halte den Rest zusammen': 'You deliver your craft, I hold the rest together',
+    'Als Dienstleister bewerben': 'Apply as a service provider',
     // Prozess
     'Wie läuft': 'How it', 'es ab': 'works',
     'Verstehen': 'Understand',
@@ -428,21 +436,27 @@
     '„Phil hat uns bei der Organisation unserer ersten Veranstaltung ‘Art meets Poetry’ mit seiner Expertise in Eventmanagement, Content und Marketing tatkräftig unterstützt. Mit kreativen Ideen, wertvollen Tipps, Flexibilität und viel positiver Energie war er eine große Unterstützung für unser Projekt. Die Zusammenarbeit war sowohl fachlich als auch menschlich unglaublich wertvoll und hat einfach Spaß gemacht.“':
       '„Phil supported us in organising our first event ‘Art meets Poetry’ with his expertise in event management, content and marketing. With creative ideas, valuable tips, flexibility and a lot of positive energy, he was a great support for our project. The collaboration was incredibly valuable both professionally and personally, and it was simply fun.“',
     'Tänzerin, Tanzlehrerin, Spoken-Word Artist, Pädagogin': 'Dancer, dance teacher, spoken-word artist, educator',
-    'Alle Pakete und Einzelleistungen sind für Unternehmen, Agenturen, Talente und Privatpersonen buchbar.':
-      'All packages and individual services can be booked by companies, agencies, talents and private individuals.',
+    'Alle Pakete und Einzelleistungen sind für Unternehmen, Agenturen, Talente, Dienstleister und Privatpersonen buchbar.':
+      'All packages and individual services can be booked by companies, agencies, talents, service providers and private individuals.',
     'Wir klären alles in einem kostenfreien Erstgespräch, und ich kalkuliere fair. Keine versteckten Kosten, keine langfristige Bindung. Eine exklusive Zusammenarbeit ist möglich, wenn du sie willst, aber kein Muss, das entscheidest du. Was ich für dich vermittle, halten wir vorher offen und schriftlich fest, fair für alle Seiten. Du bleibst frei in deinen Entscheidungen.':
       'We sort everything out in a free initial consultation, and I calculate fairly. No hidden costs, no long-term commitment. An exclusive collaboration is possible if you want it, but it’s not a must, that’s your call. Whatever I arrange for you, we put down openly and in writing beforehand, fair for all sides. You stay free in your decisions.',
     // FAQ
     'Häufig gestellte': 'Frequently asked', 'Fragen': 'questions',
     'Wer bist, was machst du, was habe ich davon?': 'Who are you, what do you do, what is in it for me?',
-    'Free Your Skill (FYS) ist die Agentur aus Hamburg, die Talente, Events und Unternehmen verbindet. Ich plane Projekte, vermittle passende Talente und biete Support während und nach dem Projekt. Für dich heißt das: direkte Vernetzung, Projektplanung, laufende Betreuung, faire und transparente Preise sowie deutschlandweite und digitale Einsätze.':
-      'Free Your Skill (FYS) is the agency from Hamburg connecting talents, events and companies. I plan projects, place the right talents and provide support during and after the project. For you that means: direct networking, project planning, ongoing support, fair and transparent pricing as well as nationwide and digital assignments.',
+    'Free Your Skill (FYS) ist die Agentur aus Hamburg, die Talente, Events und Unternehmen verbindet. Ich plane Projekte, vermittle passende Talente und Dienstleister und biete Support während und nach dem Projekt. Für dich heißt das: direkte Vernetzung, Projektplanung, laufende Betreuung, faire und transparente Preise sowie deutschlandweite und digitale Einsätze.':
+      'Free Your Skill (FYS) is the agency from Hamburg connecting talents, events and companies. I plan projects, place the right talents and service providers and provide support during and after the project. For you that means: direct networking, project planning, ongoing support, fair and transparent pricing as well as nationwide and digital assignments.',
     'Was kostet eine Zusammenarbeit?': 'What does working together cost?',
     'Die Kosten hängen vom Umfang des Projekts ab. In einem kostenlosen Erstgespräch kläre ich alles und erstelle ein individuelles Angebot. Ich kalkuliere fair und transparent; der Einstieg ist schon im niedrigen dreistelligen Bereich möglich.':
       'Costs depend on the scope of the project. In a free initial consultation I clarify everything and create a tailored offer. I price fairly and transparently; entry is possible already in the low three-digit range.',
     'Für wen ist die Agentur geeignet?': 'Who is the agency for?',
-    'Für Unternehmen, Agenturen, Talente jeglicher Art und auch Privatpersonen. Ob du einen Artist für dein Event brauchst oder als Artist vermittelt werden möchtest: ich bin für dich da.':
-      'For companies, agencies, talents of any kind and private clients too. Whether you need an artist for your event or want to be placed as an artist: I am here for you.',
+    'Für Unternehmen, Agenturen, Talente und Dienstleister jeder Art und auch Privatpersonen. Ob du einen Artist oder Dienstleister für dein Projekt brauchst oder selbst vermittelt werden möchtest: ich bin für dich da.':
+      'For companies, agencies, talents and service providers of any kind and private clients too. Whether you need an artist or service provider for your project or want to be placed yourself: I am here for you.',
+    'Vermittelst du nur Artists oder auch andere Dienstleister?': 'Do you only place artists or other service providers too?',
+    'Beides. Ich vermittle Artists genauso wie Dienstleister und Fachkräfte, etwa für Foto, Video, Technik oder Web. Für mich zählt, die richtigen Leute für dein Projekt zusammenzubringen, ob kreativ oder geschäftlich.':
+      'Both. I place artists just as much as service providers and specialists, for photo, video, tech or web, for example. What matters to me is bringing the right people together for your project, whether creative or business.',
+    'Was unterscheidet dich von einer klassischen Agentur?': 'What sets you apart from a classic agency?',
+    'Bei mir hast du einen Ansprechpartner statt drei. Ich komme selbst aus der Szene, kenne beide Seiten und bleibe vom ersten Gespräch bis nach dem Projekt an deiner Seite. Kein Booking-Automat, sondern ein Partner, der dranbleibt.':
+      'With me you get one contact instead of three. I come from the scene myself, know both sides and stay by your side from the first conversation to after the project. Not a booking machine, but a partner who stays on it.',
     'Gibt es eine Vertragsbindung?': 'Is there a lock-in contract?',
     'Nein! Ich arbeite projektbasiert und ohne langfristige Vertragsbindung. Transparenz und Fairness stehen bei mir an erster Stelle.':
       'No! I work project-based and without long-term lock-in. Transparency and fairness come first.',
@@ -462,6 +476,7 @@
     'Bitte wählen...': 'Please choose...',
     'Unternehmen / Marke': 'Company / Brand',
     'Künstler / Artist': 'Artist',
+    'Dienstleister / Fachkraft': 'Service provider / specialist',
     'Privatperson': 'Private client',
     'Allgemeine Anfrage': 'General enquiry',
     'Art des Events / Projekts': 'Type of event / project',
@@ -475,17 +490,19 @@
     '„Ich glaube an echte Verbindungen zwischen Menschen, Projekten und Ideen.“':
       '„I believe in real connections between people, projects and ideas.“',
     'Was macht die': 'What does the', 'Agentur': 'agency',
-    'Free Your Skill ist eine Agentur für kreative Verbindungen. Ich plane Events, vermittle Talente und produziere Content, alles aus einer Hand.':
-      'Free Your Skill is an agency for creative connections. I plan events, place talents and produce content, all from a single source.',
+    'Free Your Skill ist eine Agentur für kreative Verbindungen. Ich plane Events, vermittle Talente und Dienstleister und produziere Content, alles aus einer Hand.':
+      'Free Your Skill is an agency for creative connections. I plan events, place talents and service providers and produce content, all from a single source.',
     'Kontaktieren': 'Get in touch',
     'Welche': 'Which', 'Formate': 'formats',
-    'Für welche Art von Events vermittelst du Artists?': 'What kind of events do you place artists for?',
+    'Für welche Projekte vermittle ich Talente und Dienstleister?': 'What projects do I place talents and service providers for?',
     'Firmen-Events & Messen': 'Corporate events & trade fairs',
     'Kultur- & Kunst-Veranstaltungen': 'Cultural & art events',
     'Community-Events & Workshops': 'Community events & workshops',
     'Festivals & Open Airs': 'Festivals & open airs',
     'Online-Turniere & Livestreams': 'Online tournaments & livestreams',
     'Content- & Videoproduktionen': 'Content & video productions',
+    'Vermittlung von Dienstleistern & Fachkräften (z. B. Foto, Video, Technik, Web)':
+      'Placement of service providers & specialists (e.g. photo, video, tech, web)',
     'Der Mann': 'The man', 'dahinter': 'behind it',
     'Gründer & Kopf der Agentur': 'Founder & head of the agency',
     'Ich bin keine Agentur, die von außen auf die Szene schaut. Ich bin Teil von ihr. Ich komme aus der Tanzszene und habe jahrelang selbst als Artist auf der Bühne gestanden. Heute liegt mein Fokus auf der anderen Seite, aber die Bühne und ihre Tücken kenne ich aus erster Hand, das Chaos, die Abhängigkeiten und die Unzuverlässigkeit dieser Branche.':
