@@ -6,12 +6,13 @@
 (() => {
   'use strict';
 
-  const VIEWS = ['home', 'agency', 'about', 'tournament', 'impressum', 'datenschutz'];
+  const VIEWS = ['home', 'agency', 'vermittlung', 'about', 'tournament', 'impressum', 'datenschutz'];
 
   // Saubere URLs pro View (Multipage-Build). Auch fuer die Hash-Umleitung genutzt.
   const ROUTE_URLS = {
     home: '/',
     agency: '/agency/',
+    vermittlung: '/agency/vermittlung/',
     about: '/about/',
     tournament: '/tournament/',
     impressum: '/impressum/',
@@ -27,6 +28,7 @@
     de: {
       home: 'Free Your Skill — Verbinden, Planen, Supporten aus Hamburg',
       agency: 'Agency — Verbinden, Planen, Supporten | Free Your Skill Hamburg',
+      vermittlung: 'Vermittlung — die richtigen Leute für dein Projekt | Free Your Skill',
       about: 'Über uns — Free Your Skill Agency Hamburg',
       tournament: 'Tournament (Coming soon) — Free Your Skill',
       impressum: 'Impressum — Free Your Skill',
@@ -35,6 +37,7 @@
     en: {
       home: 'Free Your Skill — Connect, Plan, Support from Hamburg',
       agency: 'Agency — Connect, Plan, Support | Free Your Skill Hamburg',
+      vermittlung: 'Placement — the right people for your project | Free Your Skill',
       about: 'About — Free Your Skill Agency Hamburg',
       tournament: 'Tournament (Coming soon) — Free Your Skill',
       impressum: 'Imprint — Free Your Skill',
@@ -46,6 +49,7 @@
     de: {
       home: 'Free Your Skill aus Hamburg: Ich verbinde Kreative und Auftraggeber und begleite Projekte, bis sie stehen. Aus der Szene, für die Szene. Fair und transparent.',
       agency: 'Eventplanung, Vermittlung und Projekt-Support aus einer Hand. Die Agentur aus der Szene in Hamburg, deutschlandweit tätig. Fair, transparent, ohne Vertragsbindung.',
+      vermittlung: 'Vermittlung aus einer Hand: Ich verbinde dich mit den richtigen Artists, Dienstleistern und Fachkräften. Fair, auf Augenhöhe, mit klaren Absprachen. Aus Hamburg, deutschlandweit.',
       about: 'Free Your Skill — gegründet von Philipp Müller. Artist, Sales- und Eventmanager mit über 15 Jahren in der Kreativszene. Aus Hamburg, deutschlandweit tätig.',
       tournament: 'Das Free Your Skill Tournament ist in Vorbereitung. Alle Stile, jedes Level. Bald geht es los.',
       impressum: 'Impressum der Free Your Skill Agency, Philipp Müller, Hamburg.',
@@ -54,6 +58,7 @@
     en: {
       home: 'Free Your Skill from Hamburg: I connect creatives and clients and see projects through until they’re done. From the scene, for the scene. Fair and transparent.',
       agency: 'Event planning, booking and project support from a single source. The agency from within the scene in Hamburg, active nationwide. Fair, transparent, no lock-in.',
+      vermittlung: 'Placement from a single source: I connect you with the right artists, service providers and specialists. Fair, on equal footing, with clear agreements. From Hamburg, nationwide.',
       about: 'Free Your Skill — founded by Philipp Müller. Artist, sales and event manager with over 15 years in the creative scene. From Hamburg, active nationwide.',
       tournament: 'The Free Your Skill Tournament is in preparation. All styles, every level. Coming soon.',
       impressum: 'Imprint of Free Your Skill Agency, Philipp Müller, Hamburg.',
@@ -508,6 +513,24 @@
     'Links / Portfolio': 'Links / portfolio',
     'Nachricht': 'Message', 'Abschicken': 'Send',
     'Öffnet dein E-Mail-Programm mit vorausgefüllter Nachricht.': 'Opens your email app with a pre-filled message.',
+    // Vermittlung (Unterseite /agency/vermittlung/)
+    'Kein Booking-Automat. Ein Ansprechpartner, der von der ersten Idee bis nach dem Projekt an deiner Seite bleibt.':
+      'No booking machine. One contact who stays by your side from the first idea to after the project.',
+    'VERMITTLUNG': 'PLACEMENT',
+    'Die richtigen Leute für dein': 'The right people for your',
+    'Projekt': 'project',
+    'kreativ wie geschäftlich': 'creative and commercial',
+    'Du brauchst jemanden, der wirklich passt, nicht den erstbesten Treffer. Aus meinem kuratierten Netzwerk verbinde ich dich mit Artists genauso wie mit Dienstleistern und Fachkräften, fair und auf Augenhöhe. Du suchst einen Artist und weißt nicht, wer passt? Brauchst kurzfristig eine Fachkraft und keine Zeit für lange Suche? Oder hattest schon mal Pech mit Unzuverlässigen? Dann bist du hier richtig.':
+      'You need someone who truly fits, not just the first best match. From my curated network I connect you with artists as well as service providers and specialists, fair and on equal footing. Looking for an artist and not sure who fits? Need a specialist at short notice with no time for a long search? Or had bad luck with unreliable people before? Then you’re in the right place.',
+    'Für': 'For', 'wen': 'whom',
+    'Unternehmen und Privatpersonen, die verlässliche Leute suchen. Artists und Dienstleister, die an gute Projekte wollen.':
+      'Companies and private individuals looking for reliable people. Artists and service providers who want to get on good projects.',
+    'Was du': 'What’s', 'davon hast': 'in it for you',
+    'Eine passgenaue Auswahl statt endloser Suche': 'A tailored selection instead of an endless search',
+    'Faire, offen kommunizierte Konditionen': 'Fair, openly communicated terms',
+    'Schriftliche Absprachen und klare Rollen von Anfang an': 'Written agreements and clear roles from the start',
+    'Ein Netzwerk, das du sonst nicht auf Knopfdruck hättest': 'A network you wouldn’t otherwise have at the push of a button',
+    'Sag mir, wen oder was du brauchst': 'Tell me who or what you need.',
     // About
     'Über Free Your Skill — die Agentur aus Hamburg': 'About Free Your Skill — the agency from Hamburg',
     '„Die besten Sachen entstehen, wenn die richtigen': '„The best things happen when the right',

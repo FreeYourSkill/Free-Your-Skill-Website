@@ -23,12 +23,13 @@ const SITE = 'https://freeyourskill.com';
 
 /* ---- Routen: View -> saubere URL + Ausgabedatei ---- */
 const ROUTES = [
-  { view: 'home',        url: '/',             out: 'index.html' },
-  { view: 'agency',      url: '/agency/',      out: path.join('agency', 'index.html') },
-  { view: 'about',       url: '/about/',       out: path.join('about', 'index.html') },
-  { view: 'tournament',  url: '/tournament/',  out: path.join('tournament', 'index.html') },
-  { view: 'impressum',   url: '/impressum/',   out: path.join('impressum', 'index.html') },
-  { view: 'datenschutz', url: '/datenschutz/', out: path.join('datenschutz', 'index.html') }
+  { view: 'home',        url: '/',                     out: 'index.html' },
+  { view: 'agency',      url: '/agency/',              out: path.join('agency', 'index.html') },
+  { view: 'vermittlung', url: '/agency/vermittlung/',  out: path.join('agency', 'vermittlung', 'index.html') },
+  { view: 'about',       url: '/about/',               out: path.join('about', 'index.html') },
+  { view: 'tournament',  url: '/tournament/',          out: path.join('tournament', 'index.html') },
+  { view: 'impressum',   url: '/impressum/',           out: path.join('impressum', 'index.html') },
+  { view: 'datenschutz', url: '/datenschutz/',         out: path.join('datenschutz', 'index.html') }
 ];
 
 /* Statische Dateien, die 1:1 nach dist/ kopiert werden */
