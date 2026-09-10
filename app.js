@@ -510,8 +510,8 @@
     'Öffnet dein E-Mail-Programm mit vorausgefüllter Nachricht.': 'Opens your email app with a pre-filled message.',
     // About
     'Über Free Your Skill — die Agentur aus Hamburg': 'About Free Your Skill — the agency from Hamburg',
-    '„Ich glaube an echte Verbindungen zwischen Menschen, Projekten und Ideen.“':
-      '„I believe in real connections between people, projects and ideas.“',
+    '„Die besten Sachen entstehen, wenn die richtigen Menschen, Ideen und Projekte zusammenfinden, egal wie verrückt es zuerst klingt.“':
+      '„The best things happen when the right people, ideas and projects come together, no matter how crazy it sounds at first.“',
     'Was macht die': 'What does the', 'Agentur': 'agency',
     'Free Your Skill ist eine Agentur für kreative Verbindungen. Ich plane Events, vermittle Talente und Dienstleister und produziere Content, alles aus einer Hand.':
       'Free Your Skill is an agency for creative connections. I plan events, place talents and service providers and produce content, all from a single source.',
@@ -538,8 +538,8 @@
       'No three contacts, no endless feedback loops between creation, booking and organization.',
     'Ein starkes Netzwerk, gebündelt in einer Person, die an deiner Seite bleibt.':
       'One strong network, bundled in one person who stays by your side.',
-    'Mein Motto: Each One Teach One. Ich glaube an echte Verbindungen zwischen Menschen, Projekten und Ideen, und daran, dass wir miteinander weiterkommen als gegeneinander. Lass mal connecten.':
-      'My motto: Each One Teach One. I believe in real connections between people, projects and ideas, and that we get further together than against each other. Let’s connect.',
+    'Mein Motto: Each One Teach One. Miteinander kommen wir weiter als gegeneinander. Lass mal connecten.':
+      'My motto: Each One Teach One. Together we get further than against each other. Let’s connect.',
     'Jahre Vertrieb & Kundenkontakt': 'years of sales & client contact',
     'Jahre Eventmanagement': 'years of event management',
     'Jahre in der Kreativszene': 'years in the creative scene',
