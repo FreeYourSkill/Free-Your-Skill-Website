@@ -647,6 +647,13 @@ body[data-route="home"] .header { display: none; }
 .vorteile-card .btn--small {
   margin-top: auto;
 }
+/* Vorteile-Buttons: normaler Primary-Look (Pink/schwarz), beim Hover
+   Wechsel innerhalb der Markenfarben nach Teal (statt Standard-Weiss). */
+.vorteile-card .btn--primary:hover {
+  background: var(--teal);
+  color: var(--black);
+  box-shadow: 0 8px 30px rgba(112, 176, 176, 0.3);
+}
 .vorteile-card::before {
   content: '';
   position: absolute;
@@ -1407,9 +1414,11 @@ body[data-route="home"] .header { display: none; }
 .about-cta__card {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 1/1;
+  /* Flacher Streifen; Bild darf per object-fit: cover leicht beschnitten sein. */
+  height: clamp(180px, 20vw, 300px);
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
 }
 .about-cta__img {
@@ -1420,12 +1429,17 @@ body[data-route="home"] .header { display: none; }
   transition: filter 0.6s, transform 0.6s var(--ease-out);
 }
 .about-cta__card:hover .about-cta__img {
-  filter: grayscale(50%) brightness(0.4);
+  /* Bild voll sichtbar (volle Helligkeit, volle Farbe) plus leichter Zoom. */
+  filter: none;
   transform: scale(1.05);
 }
 .about-cta__overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 55%);
+  background: rgba(0,0,0,0.3);
+  transition: background 0.6s var(--ease-out);
+}
+.about-cta__card:hover .about-cta__overlay {
+  background: rgba(0,0,0,0.08);
 }
 /* Zweizeiliges Label, in EINEM Textknoten mit eingebettetem Zeilenumbruch
    (weniger fragil fuers DICT als zwei separate Elemente, siehe app.js).
@@ -1434,18 +1448,19 @@ body[data-route="home"] .header { display: none; }
 .about-cta__label {
   position: relative; z-index: 2;
   width: 100%;
-  padding: clamp(1.5rem, 3vw, 2.5rem) 1rem;
+  padding: 1rem;
   text-align: center;
   font-family: var(--font-heading);
   white-space: pre-line;
   text-transform: uppercase;
-  font-size: clamp(0.75rem, 1vw, 0.9rem);
+  font-size: clamp(0.85rem, 1.1vw, 1.05rem);
   font-weight: 400;
   letter-spacing: 0.16em;
   color: var(--white);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.55), 0 6px 24px rgba(0,0,0,0.75);
 }
 .about-cta__label::first-line {
-  font-size: clamp(1.3rem, 2vw, 1.9rem);
+  font-size: clamp(1.5rem, 2.4vw, 2.3rem);
   font-weight: 700;
   letter-spacing: 0.04em;
 }
@@ -1634,29 +1649,29 @@ body[data-route="home"] .header { display: none; }
   cursor: pointer;
 }
 
-/* Instagram-Block kompakt: soll den Abschluss der About-Seite nicht ueberstrahlen.
+/* Instagram-Block: kompakt gehalten, aber ein Stueck groesser als zuvor.
    2-Klick-Einwilligung und Datenschutz-Hinweis bleiben unveraendert erhalten. */
 .section.insta-section {
-  padding: clamp(2.5rem, 5vw, 4rem) 0;
+  padding: clamp(3.5rem, 6vw, 5.5rem) 0;
 }
 .insta-section .section__title {
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
-  margin-bottom: 0.75rem;
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
+  margin-bottom: 1rem;
 }
 .insta-section .insta-grid {
-  max-width: 520px;
-  margin: 1.5rem auto 0;
-  gap: 0.6rem;
+  max-width: 640px;
+  margin: 2rem auto 0;
+  gap: 0.85rem;
 }
 .insta-section .insta-consent {
-  max-width: 520px;
-  padding: 1.75rem 1.5rem;
-  margin-top: 1.25rem;
+  max-width: 600px;
+  padding: 2.25rem 1.75rem;
+  margin-top: 1.75rem;
 }
-.insta-section .insta-consent__text { margin-bottom: 0.75rem; }
-.insta-section .insta-consent__link { margin-bottom: 1.1rem; }
-.insta-section .insta-consent__remember { margin-bottom: 1rem; }
-.insta-section .cta-row { margin-top: 1.5rem; }
+.insta-section .insta-consent__text { margin-bottom: 0.9rem; }
+.insta-section .insta-consent__link { margin-bottom: 1.35rem; }
+.insta-section .insta-consent__remember { margin-bottom: 1.25rem; }
+.insta-section .cta-row { margin-top: 2rem; }
 
 /* ============================================
    KONTAKT
@@ -1970,7 +1985,11 @@ body[data-route="home"] .header { display: none; }
   .brand-card { padding: 2rem 1.5rem; }
   .dual-cta { grid-template-columns: 1fr; }
   .about-cta__grid { grid-template-columns: 1fr; }
-  .about-cta__card { aspect-ratio: 3/2; }
+  /* Mobil: Bild komplett sichtbar (3:2 = Bildverhaeltnis, kein Beschnitt),
+     volle Helligkeit von Anfang an, kompakt gestapelt. */
+  .about-cta__card { height: auto; aspect-ratio: 3/2; }
+  .about-cta__img { filter: none; }
+  .about-cta__overlay { background: rgba(0,0,0,0.42); }
   .kontakt-grid { grid-template-columns: 1fr; gap: 2rem; }
   .form-row { grid-template-columns: 1fr; }
   .insta-grid { grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
