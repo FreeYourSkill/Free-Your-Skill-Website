@@ -520,13 +520,16 @@
     'Die richtigen Leute für dein': 'The right people for your',
     'Projekt': 'project',
     'kreativ wie geschäftlich': 'creative and commercial',
-    'Du brauchst jemanden, der wirklich passt, nicht den erstbesten Treffer. Aus meinem kuratierten Netzwerk verbinde ich dich mit Artists genauso wie mit Dienstleistern und Fachkräften, fair und auf Augenhöhe. Du suchst einen Artist und weißt nicht, wer passt? Brauchst kurzfristig eine Fachkraft und keine Zeit für lange Suche? Oder hattest schon mal Pech mit Unzuverlässigen? Dann bist du hier richtig.':
-      'You need someone who truly fits, not just the first best match. From my curated network I connect you with artists as well as service providers and specialists, fair and on equal footing. Looking for an artist and not sure who fits? Need a specialist at short notice with no time for a long search? Or had bad luck with unreliable people before? Then you’re in the right place.',
+    'Du brauchst jemanden, der wirklich passt, nicht den erstbesten Treffer!':
+      'You need someone who really fits, not the first match you find!',
+    'Aus meinem kuratierten Netzwerk verbinde ich dich mit Artists genauso wie mit Dienstleistern und Fachkräften,':
+      'From my curated network I connect you with artists as well as service providers and specialists,',
+    'fair und auf Augenhöhe.': 'fair and on equal footing.',
     'Für': 'For', 'wen': 'whom',
     'Unternehmen und Privatpersonen, die verlässliche Leute suchen. Artists und Dienstleister, die an gute Projekte wollen.':
       'Companies and private individuals looking for reliable people. Artists and service providers who want to get on good projects.',
     'Was du': 'What’s', 'davon hast': 'in it for you',
-    'Eine passgenaue Auswahl statt endloser Suche': 'A tailored selection instead of an endless search',
+    'Passgenaue Auswahl statt endloser Suche': 'A tailored selection instead of an endless search',
     'Faire, offen kommunizierte Konditionen': 'Fair, openly communicated terms',
     'Schriftliche Absprachen und klare Rollen von Anfang an': 'Written agreements and clear roles from the start',
     'Ein Netzwerk, das du sonst nicht auf Knopfdruck hättest': 'A network you wouldn’t otherwise have at the push of a button',

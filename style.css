@@ -615,33 +615,14 @@ body[data-route="home"] .header { display: none; }
 
 /* ============================================
    UNTERSEITE VERMITTLUNG  (/agency/vermittlung/)
-   Goldener Schnitt als dezenter Leitgedanke: Hero-Hoehe 61.8vh,
-   Ueberschrift/Fliesstext in ausgewogener Groessenrelation.
    ============================================ */
-/* Schlanke USP-Leiste oben; Top-Abstand haelt den fixen Header frei. */
-.verm-strip {
-  background: var(--black-light);
-  border-bottom: 1px solid rgba(112, 176, 176, 0.22);
-  /* Top-Abstand haelt den fixen Header frei (mobil ~104px, Desktop ~132px). */
-  padding: clamp(7rem, 13vw, 9rem) 0 0.95rem;
-  text-align: center;
-}
-.verm-strip__text {
-  font-family: var(--font-heading);
-  font-size: clamp(0.82rem, 1.4vw, 1rem);
-  font-weight: 400;
-  letter-spacing: 0.06em;
-  color: var(--white-dim);
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Hero: volle Breite, Bild mit weichem diagonalem Verlauf (links dunkler,
-   sanft nach rechts auslaufend, keine harte Kante). Text auf der dunklen Seite. */
+/* Hero: full-bleed bis ganz oben (Header floatet transparent darueber wie auf
+   den anderen Seiten). Grosszuegige Hoehe -> Bild weiter rausgezoomt, sodass
+   Phil (rechts) moeglichst ganz und die linke Person ab Hals abwaerts sichtbar
+   sind; der Kopf der linken Person wird vom Verlauf verdeckt. */
 .verm-hero {
   position: relative;
-  height: 61.8vh;
-  min-height: 440px;
+  height: clamp(600px, 92vh, 1040px);
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -650,14 +631,18 @@ body[data-route="home"] .header { display: none; }
 .verm-hero__img {
   width: 100%; height: 100%;
   object-fit: cover;
-  object-position: 50% 22%;
-  filter: grayscale(25%) brightness(0.72);
+  object-position: 50% 12%;
+  filter: grayscale(20%) brightness(0.82);
 }
+/* Kraeftiger diagonaler Verlauf von oben links: legt sich ueber Kopf/linke
+   Seite und laeuft zur Mitte hin sanft aus. Zusaetzlich linke Spalte fuer die
+   Textlesbarkeit abdunkeln und unten weich in Schwarz blenden. */
 .verm-hero__overlay {
   position: absolute; inset: 0;
   background:
-    linear-gradient(100deg, rgba(10,10,10,0.94) 0%, rgba(10,10,10,0.8) 24%, rgba(10,10,10,0.42) 55%, rgba(10,10,10,0.12) 100%),
-    linear-gradient(to top, var(--black) 0%, transparent 26%);
+    linear-gradient(128deg, rgba(10,10,10,0.97) 0%, rgba(10,10,10,0.9) 20%, rgba(10,10,10,0.5) 40%, rgba(10,10,10,0.15) 60%, rgba(10,10,10,0) 78%),
+    linear-gradient(90deg, rgba(10,10,10,0.72) 0%, rgba(10,10,10,0.28) 32%, rgba(10,10,10,0) 56%),
+    linear-gradient(to top, var(--black) 0%, rgba(10,10,10,0) 22%);
 }
 .verm-hero__content {
   position: relative; z-index: 2;
@@ -679,9 +664,81 @@ body[data-route="home"] .header { display: none; }
   color: var(--white-dim);
 }
 
-/* Inhaltssektionen etwas kompakter als der Standard fuer ruhigen Rhythmus. */
+/* Schlanke USP-Leiste unter dem Hero, zentriert. */
+.verm-strip {
+  background: var(--black-light);
+  border-top: 1px solid rgba(112, 176, 176, 0.22);
+  border-bottom: 1px solid rgba(112, 176, 176, 0.22);
+  padding: 1.1rem 0;
+  text-align: center;
+}
+.verm-strip__text {
+  font-family: var(--font-heading);
+  font-size: clamp(0.82rem, 1.4vw, 1rem);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--white-dim);
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+/* Inhaltssektionen etwas kompakter fuer ruhigen Rhythmus; alles darunter zentriert. */
 .verm-section { padding: clamp(2.75rem, 5.5vw, 5rem) 0; }
 .verm-section .section__title { margin-bottom: 1.25rem; }
+.verm-center { text-align: center; }
+.verm-center .lead { margin-left: auto; margin-right: auto; }
+
+/* Einleitung: drei zentrierte Zeilen, erste Zeile hervorgehoben. */
+.verm-intro {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.verm-intro__lead {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 2.6vw, 2rem);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+.verm-intro__line {
+  display: block;
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  line-height: 1.6;
+  color: var(--white-dim);
+}
+
+/* "Was du davon hast" als zentriertes 2er-Raster kleiner Kacheln. */
+.verm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  max-width: 760px;
+  margin: 2.25rem auto 0;
+}
+.verm-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--black-card);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  padding: 1.5rem 1.5rem;
+  font-family: var(--font-heading);
+  font-size: clamp(0.95rem, 1.4vw, 1.08rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  color: var(--white-dim);
+  transition: border-color 0.35s, transform 0.35s var(--ease-out);
+}
+.verm-card:hover {
+  border-color: var(--pink);
+  transform: translateY(-4px);
+}
+
 .verm-cta-section { padding: clamp(2.5rem, 5vw, 4.5rem) 0 clamp(4rem, 8vw, 7rem); }
 .verm-cta { text-align: center; }
 
@@ -2079,6 +2136,7 @@ body[data-route="home"] .header { display: none; }
   .brands-grid { grid-template-columns: 1fr; max-width: 420px; }
   .brand-card { padding: 2rem 1.5rem; }
   .dual-cta { grid-template-columns: 1fr; }
+  .verm-grid { grid-template-columns: 1fr; }
   .about-cta__grid { grid-template-columns: 1fr; }
   /* Mobil: Bild komplett sichtbar (3:2 = Bildverhaeltnis, kein Beschnitt),
      volle Helligkeit von Anfang an, kompakt gestapelt. */
