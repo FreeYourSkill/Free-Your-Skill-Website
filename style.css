@@ -1943,6 +1943,10 @@ body[data-route="home"] .header { display: none; }
   padding: 4rem clamp(1.5rem, 4vw, 3rem);
   margin-bottom: 4rem;
 }
+.about-page-hero__quote blockquote {
+  position: relative;
+  padding-left: 1.75rem;
+}
 .about-page-hero__quote blockquote p {
   font-family: var(--font-display);
   font-size: clamp(1.8rem, 4vw, 3rem);
@@ -1950,13 +1954,19 @@ body[data-route="home"] .header { display: none; }
   letter-spacing: 0.03em;
   color: var(--white);
 }
+/* Editorial (Variante B): duenne senkrechte Akzentlinie in Teal links vom Zitat */
 .about-page-hero__quote blockquote::before {
   content: '';
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: var(--pink);
-  margin-bottom: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--teal);
+}
+/* Letzte Zeile des Zitats in Pink, auf eigener Zeile (<br> im Markup) */
+.about-page-hero__quote-accent {
+  color: var(--pink);
 }
 
 /* ============================================
