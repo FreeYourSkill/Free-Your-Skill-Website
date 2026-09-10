@@ -401,6 +401,11 @@
     'Zugang zu Auftraggebern und Netzwerk': 'Access to clients and network',
     'Du lieferst dein Handwerk, ich halte den Rest zusammen': 'You deliver your craft, I hold the rest together',
     'Als Dienstleister anfragen': 'Enquire as a service provider',
+    // About: zweizeilige Bild-CTA-Labels (ein Textknoten mit Zeilenumbruch,
+    // dadurch eigener Key statt Kollision mit den Vorteile-Uebersetzungen oben)
+    'Als Auftraggeber\nAnfragen': 'As a client\nGet in touch',
+    'Als Artist\nAnfragen': 'As an artist\nGet in touch',
+    'Als Dienstleister\nAnfragen': 'As a service provider\nGet in touch',
     // Prozess
     'Wie läuft': 'How it', 'es ab': 'works',
     'Verstehen': 'Understand',

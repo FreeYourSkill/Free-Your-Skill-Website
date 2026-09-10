@@ -1396,10 +1396,14 @@ body[data-route="home"] .header { display: none; }
    Ruhezustand, im Hover moderat farbiger/heller plus Bild-Zoom.
    ============================================ */
 .about-cta {
+  padding: 2rem 0;
+}
+.about-cta__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  padding: 2rem 0;
+  gap: 1.25rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 .about-cta__card {
   position: relative;
@@ -1425,17 +1429,27 @@ body[data-route="home"] .header { display: none; }
   position: absolute; inset: 0;
   background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 55%);
 }
+/* Zweizeiliges Label, in EINEM Textknoten mit eingebettetem Zeilenumbruch
+   (weniger fragil fuers DICT als zwei separate Elemente, siehe app.js).
+   ::first-line stylt die grosse/fette Titelzeile, die Basis-Regel die
+   kleinere, leicht gesperrte zweite Zeile. */
 .about-cta__label {
   position: relative; z-index: 2;
   width: 100%;
-  padding: 1.5rem;
+  padding: 1.5rem 1rem;
   text-align: center;
   font-family: var(--font-heading);
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  white-space: pre-line;
   text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
   color: var(--white);
+}
+.about-cta__label::first-line {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
 /* ============================================
@@ -1916,7 +1930,7 @@ body[data-route="home"] .header { display: none; }
   .footer__grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
   .vorteile-grid { grid-template-columns: 1fr 1fr; }
   .dual-cta { grid-template-columns: 1fr 1fr; }
-  .about-cta { grid-template-columns: 1fr 1fr; }
+  .about-cta__grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 768px) {
@@ -1934,7 +1948,7 @@ body[data-route="home"] .header { display: none; }
   .brands-grid { grid-template-columns: 1fr; max-width: 420px; }
   .brand-card { padding: 2rem 1.5rem; }
   .dual-cta { grid-template-columns: 1fr; }
-  .about-cta { grid-template-columns: 1fr; }
+  .about-cta__grid { grid-template-columns: 1fr; }
   .kontakt-grid { grid-template-columns: 1fr; gap: 2rem; }
   .form-row { grid-template-columns: 1fr; }
   .insta-grid { grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
