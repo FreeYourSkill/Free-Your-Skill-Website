@@ -1396,20 +1396,18 @@ body[data-route="home"] .header { display: none; }
    Ruhezustand, im Hover moderat farbiger/heller plus Bild-Zoom.
    ============================================ */
 .about-cta {
-  padding: 2rem 0;
+  padding: 0;
 }
+/* Randlose Banner-Reihe ueber die volle Seitenbreite, nur minimaler Spalt. */
 .about-cta__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-  max-width: 900px;
-  margin: 0 auto;
+  gap: 4px;
 }
 .about-cta__card {
   position: relative;
   overflow: hidden;
-  border-radius: 16px;
-  aspect-ratio: 4/5;
+  aspect-ratio: 1/1;
   display: flex;
   align-items: flex-end;
   text-decoration: none;
@@ -1436,18 +1434,18 @@ body[data-route="home"] .header { display: none; }
 .about-cta__label {
   position: relative; z-index: 2;
   width: 100%;
-  padding: 1.5rem 1rem;
+  padding: clamp(1.5rem, 3vw, 2.5rem) 1rem;
   text-align: center;
   font-family: var(--font-heading);
   white-space: pre-line;
   text-transform: uppercase;
-  font-size: 0.75rem;
+  font-size: clamp(0.75rem, 1vw, 0.9rem);
   font-weight: 400;
   letter-spacing: 0.16em;
   color: var(--white);
 }
 .about-cta__label::first-line {
-  font-size: 1.3rem;
+  font-size: clamp(1.3rem, 2vw, 1.9rem);
   font-weight: 700;
   letter-spacing: 0.04em;
 }
@@ -1635,6 +1633,30 @@ body[data-route="home"] .header { display: none; }
   accent-color: var(--pink);
   cursor: pointer;
 }
+
+/* Instagram-Block kompakt: soll den Abschluss der About-Seite nicht ueberstrahlen.
+   2-Klick-Einwilligung und Datenschutz-Hinweis bleiben unveraendert erhalten. */
+.section.insta-section {
+  padding: clamp(2.5rem, 5vw, 4rem) 0;
+}
+.insta-section .section__title {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  margin-bottom: 0.75rem;
+}
+.insta-section .insta-grid {
+  max-width: 520px;
+  margin: 1.5rem auto 0;
+  gap: 0.6rem;
+}
+.insta-section .insta-consent {
+  max-width: 520px;
+  padding: 1.75rem 1.5rem;
+  margin-top: 1.25rem;
+}
+.insta-section .insta-consent__text { margin-bottom: 0.75rem; }
+.insta-section .insta-consent__link { margin-bottom: 1.1rem; }
+.insta-section .insta-consent__remember { margin-bottom: 1rem; }
+.insta-section .cta-row { margin-top: 1.5rem; }
 
 /* ============================================
    KONTAKT
@@ -1930,7 +1952,6 @@ body[data-route="home"] .header { display: none; }
   .footer__grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
   .vorteile-grid { grid-template-columns: 1fr 1fr; }
   .dual-cta { grid-template-columns: 1fr 1fr; }
-  .about-cta__grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 768px) {
@@ -1949,6 +1970,7 @@ body[data-route="home"] .header { display: none; }
   .brand-card { padding: 2rem 1.5rem; }
   .dual-cta { grid-template-columns: 1fr; }
   .about-cta__grid { grid-template-columns: 1fr; }
+  .about-cta__card { aspect-ratio: 3/2; }
   .kontakt-grid { grid-template-columns: 1fr; gap: 2rem; }
   .form-row { grid-template-columns: 1fr; }
   .insta-grid { grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
