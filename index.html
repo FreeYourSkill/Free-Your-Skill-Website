@@ -543,16 +543,16 @@
                   </select>
                 </div>
 
-                <!-- Conditional: Unternehmen / Marke -->
-                <div class="form-conditional" data-cond="unternehmen">
+                <!-- Conditional: Unternehmen / Marke + Privatperson (gleiche Zusatzfelder) -->
+                <div class="form-conditional" data-cond="unternehmen privat">
                   <div class="form-row">
                     <div class="form-group">
-                      <label for="firma">Unternehmen / Marke</label>
-                      <input type="text" id="firma" name="firma" placeholder="Name des Unternehmens">
+                      <label for="suche">Was suchst du?</label>
+                      <input type="text" id="suche" name="suche" placeholder="z. B. Artist, Dienstleister, Event-Unterstützung">
                     </div>
                     <div class="form-group">
-                      <label for="eventart">Art des Events / Projekts</label>
-                      <input type="text" id="eventart" name="eventart" placeholder="z. B. Firmenfeier, Messe, Kampagne">
+                      <label for="eventart">Art des Projekts / Anlass</label>
+                      <input type="text" id="eventart" name="eventart" placeholder="z. B. Firmenfeier, Messe, Kampagne, Geburtstag">
                     </div>
                   </div>
                 </div>
@@ -565,17 +565,23 @@
                       <input type="text" id="disziplin" name="disziplin" placeholder="z. B. Tanz, Musik, Moderation">
                     </div>
                     <div class="form-group">
-                      <label for="links">Links (Instagram, Portfolio)</label>
+                      <label for="links">Links (Portfolio, Instagram)</label>
                       <input type="text" id="links" name="links" placeholder="@profil / Website">
                     </div>
                   </div>
                 </div>
 
-                <!-- Conditional: Privatperson -->
-                <div class="form-conditional" data-cond="privat">
-                  <div class="form-group">
-                    <label for="anlass">Anlass</label>
-                    <input type="text" id="anlass" name="anlass" placeholder="z. B. Geburtstag, Hochzeit, privates Event">
+                <!-- Conditional: Dienstleister / Fachkraft -->
+                <div class="form-conditional" data-cond="dienstleister">
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="fachgebiet">Fachgebiet (Foto, Video, Technik, Web ...)</label>
+                      <input type="text" id="fachgebiet" name="fachgebiet" placeholder="z. B. Fotografie, Videoschnitt, Lichttechnik, Web">
+                    </div>
+                    <div class="form-group">
+                      <label for="portfolio">Links / Portfolio</label>
+                      <input type="text" id="portfolio" name="portfolio" placeholder="Website / @profil">
+                    </div>
                   </div>
                 </div>
 
@@ -1092,11 +1098,12 @@ Anfragen</span>
       <option value="privat"></option>
       <option value="allgemein"></option>
     </select>
-    <input type="text" name="firma" />
+    <input type="text" name="suche" />
     <input type="text" name="eventart" />
     <input type="text" name="disziplin" />
     <input type="text" name="links" />
-    <input type="text" name="anlass" />
+    <input type="text" name="fachgebiet" />
+    <input type="text" name="portfolio" />
     <textarea name="nachricht"></textarea>
   </form>
 

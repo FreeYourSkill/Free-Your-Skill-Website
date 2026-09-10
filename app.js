@@ -268,20 +268,35 @@
       privat: 'Privatperson',
       allgemein: 'Allgemeine Anfrage'
     };
-    // Which extra inputs belong to which Betreff, with human labels for the mail body
+    // Which extra inputs belong to which Betreff (Doku; Uebermittlung laeuft per FormData)
     const COND_FIELDS = {
-      unternehmen: [['firma', 'Unternehmen/Marke'], ['eventart', 'Art des Events/Projekts']],
+      unternehmen: [['suche', 'Was suchst du'], ['eventart', 'Art des Projekts/Anlass']],
+      privat: [['suche', 'Was suchst du'], ['eventart', 'Art des Projekts/Anlass']],
       kuenstler: [['disziplin', 'Disziplin/Skill'], ['links', 'Links']],
-      privat: [['anlass', 'Anlass']]
+      dienstleister: [['fachgebiet', 'Fachgebiet'], ['portfolio', 'Links/Portfolio']]
     };
     const conds = form.querySelectorAll('.form-conditional');
 
     function syncConditional() {
       const val = fields.betreff.value;
-      conds.forEach(c => c.classList.toggle('is-active', c.dataset.cond === val));
+      conds.forEach(c => {
+        const list = (c.dataset.cond || '').trim().split(/\s+/);
+        c.classList.toggle('is-active', list.indexOf(val) !== -1);
+      });
     }
     fields.betreff.addEventListener('change', syncConditional);
     syncConditional();
+
+    // Deep-Link: ?anliegen=... waehlt das passende Anliegen vor und blendet
+    // die Zusatzfelder ein. Das Scrollen zu #kontakt uebernimmt initMultiPage().
+    try {
+      const ANLIEGEN = { unternehmen: 'unternehmen', artist: 'kuenstler', dienstleister: 'dienstleister' };
+      const wanted = ANLIEGEN[new URLSearchParams(window.location.search).get('anliegen')];
+      if (wanted) {
+        fields.betreff.value = wanted;
+        syncConditional();
+      }
+    } catch (e) {}
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -485,10 +500,12 @@
     'Dienstleister / Fachkraft': 'Service provider / specialist',
     'Privatperson': 'Private client',
     'Allgemeine Anfrage': 'General enquiry',
-    'Art des Events / Projekts': 'Type of event / project',
+    'Was suchst du?': 'What are you looking for?',
+    'Art des Projekts / Anlass': 'Type of project / occasion',
     'Disziplin / Skill': 'Discipline / skill',
-    'Links (Instagram, Portfolio)': 'Links (Instagram, portfolio)',
-    'Anlass': 'Occasion',
+    'Links (Portfolio, Instagram)': 'Links (portfolio, Instagram)',
+    'Fachgebiet (Foto, Video, Technik, Web ...)': 'Field (photo, video, tech, web ...)',
+    'Links / Portfolio': 'Links / portfolio',
     'Nachricht': 'Message', 'Abschicken': 'Send',
     'Öffnet dein E-Mail-Programm mit vorausgefüllter Nachricht.': 'Opens your email app with a pre-filled message.',
     // About
@@ -549,11 +566,12 @@
   const PLACEHOLDERS = {
     name: ['Dein Name', 'Your name'],
     email: ['deine@email.de', 'you@email.com'],
-    firma: ['Name des Unternehmens', 'Company name'],
-    eventart: ['z. B. Firmenfeier, Messe, Kampagne', 'e.g. company party, trade fair, campaign'],
+    suche: ['z. B. Artist, Dienstleister, Event-Unterstützung', 'e.g. artist, service provider, event support'],
+    eventart: ['z. B. Firmenfeier, Messe, Kampagne, Geburtstag', 'e.g. company party, trade fair, campaign, birthday'],
     disziplin: ['z. B. Tanz, Musik, Moderation', 'e.g. dance, music, hosting'],
     links: ['@profil / Website', '@profile / website'],
-    anlass: ['z. B. Geburtstag, Hochzeit, privates Event', 'e.g. birthday, wedding, private event'],
+    fachgebiet: ['z. B. Fotografie, Videoschnitt, Lichttechnik, Web', 'e.g. photography, video editing, lighting, web'],
+    portfolio: ['Website / @profil', 'website / @profile'],
     nachricht: ['Erzähl mir von deinem Projekt...', 'Tell me about your project...']
   };
 
