@@ -510,8 +510,8 @@
     'Öffnet dein E-Mail-Programm mit vorausgefüllter Nachricht.': 'Opens your email app with a pre-filled message.',
     // About
     'Über Free Your Skill — die Agentur aus Hamburg': 'About Free Your Skill — the agency from Hamburg',
-    '„Die besten Sachen entstehen, wenn die richtigen Menschen, Ideen und Projekte zusammenfinden,':
-      '„The best things happen when the right people, ideas and projects come together,',
+    '„Die besten Sachen entstehen, wenn die richtigen': '„The best things happen when the right',
+    'Menschen, Ideen und Projekte zusammenfinden,': 'people, ideas and projects come together,',
     'egal wie verrückt es zuerst klingt.“': 'no matter how crazy it sounds at first.“',
     'Was macht die': 'What does the', 'Agentur': 'agency',
     'Free Your Skill ist eine Agentur für kreative Verbindungen. Ich plane Events, vermittle Talente und Dienstleister und produziere Content, alles aus einer Hand.':

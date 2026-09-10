@@ -1939,7 +1939,7 @@ body[data-route="home"] .header { display: none; }
 .about-page-hero__quote {
   position: relative;
   z-index: 2;
-  max-width: 550px;
+  max-width: 880px;
   padding: 4rem clamp(1.5rem, 4vw, 3rem);
   margin-bottom: 4rem;
 }
@@ -1949,18 +1949,19 @@ body[data-route="home"] .header { display: none; }
 }
 .about-page-hero__quote blockquote p {
   font-family: var(--font-display);
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  line-height: 1.15;
+  font-size: clamp(1.35rem, 2.4vw, 1.95rem);
+  line-height: 1.25;
   letter-spacing: 0.03em;
   color: var(--white);
 }
-/* Editorial (Variante B): duenne senkrechte Akzentlinie in Teal links vom Zitat */
+/* Editorial (Variante B): duenne senkrechte Akzentlinie in Teal links vom Zitat,
+   spannt genau die Hoehe des Zitats (top/bottom am Textblock, leichter Inset). */
 .about-page-hero__quote blockquote::before {
   content: '';
   position: absolute;
   left: 0;
-  top: 0;
-  bottom: 0;
+  top: 0.12em;
+  bottom: 0.12em;
   width: 3px;
   background: var(--teal);
 }
@@ -2030,6 +2031,9 @@ body[data-route="home"] .header { display: none; }
   /* About page hero responsive */
   .about-page-hero { height: 60vh; min-height: 400px; }
   .about-page-hero__quote { margin-bottom: 2rem; }
+  /* Mobil den ersten festen Umbruch aufheben, damit der weisse Teil
+     natuerlich fliesst statt kurzer Waisenzeilen; Pink-Zeile bleibt separat. */
+  .about-page-hero__quote blockquote p br:first-of-type { display: none; }
 }
 
 @media (max-width: 480px) {
