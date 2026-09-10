@@ -639,6 +639,13 @@ body[data-route="home"] .header { display: none; }
   border: 1px solid rgba(255,255,255,0.08);
   position: relative;
   overflow: hidden;
+  /* Gleiche Kartenhoehe kommt schon vom Grid (align-items: stretch);
+     hier nur dafuer sorgen, dass der Button in jeder Karte unten buendig sitzt. */
+  display: flex;
+  flex-direction: column;
+}
+.vorteile-card .btn--small {
+  margin-top: auto;
 }
 .vorteile-card::before {
   content: '';
@@ -1364,6 +1371,56 @@ body[data-route="home"] .header { display: none; }
 }
 
 /* ============================================
+   ABOUT: BILD-CTAS (Auftraggeber / Artist / Dienstleister)
+   Ein Foto, ein Label unten auf dem Bild, ein Klickziel.
+   Verdunkelung/Hover exakt wie die vorherige Bild-Button-Version
+   (ehemals .dual-cta__bg): ruhige, verblasste Stimmungsbilder im
+   Ruhezustand, im Hover moderat farbiger/heller plus Bild-Zoom.
+   ============================================ */
+.about-cta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+.about-cta__card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  aspect-ratio: 4/5;
+  display: flex;
+  align-items: flex-end;
+  text-decoration: none;
+}
+.about-cta__img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) brightness(0.3);
+  transition: filter 0.6s, transform 0.6s var(--ease-out);
+}
+.about-cta__card:hover .about-cta__img {
+  filter: grayscale(50%) brightness(0.4);
+  transform: scale(1.05);
+}
+.about-cta__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 55%);
+}
+.about-cta__label {
+  position: relative; z-index: 2;
+  width: 100%;
+  padding: 1.5rem;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+/* ============================================
    FAQ ACCORDION
    ============================================ */
 .faq-list {
@@ -1841,6 +1898,7 @@ body[data-route="home"] .header { display: none; }
   .footer__grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
   .vorteile-grid { grid-template-columns: 1fr 1fr; }
   .dual-cta { grid-template-columns: 1fr 1fr; }
+  .about-cta { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 768px) {
@@ -1858,6 +1916,7 @@ body[data-route="home"] .header { display: none; }
   .brands-grid { grid-template-columns: 1fr; max-width: 420px; }
   .brand-card { padding: 2rem 1.5rem; }
   .dual-cta { grid-template-columns: 1fr; }
+  .about-cta { grid-template-columns: 1fr; }
   .kontakt-grid { grid-template-columns: 1fr; gap: 2rem; }
   .form-row { grid-template-columns: 1fr; }
   .insta-grid { grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
@@ -2185,7 +2244,7 @@ html:not([lang="en"]) .ds-en { display: none; }
 /* ---- TOUCH: disable hover-translate jank, keep tap targets comfy ---- */
 @media (hover: none) {
   .btn, .usp, .review-card, .prozess-step, .format-item, .intro__card,
-  .vorteile-card, .dual-cta__card, .keyfact, .brand-card {
+  .vorteile-card, .dual-cta__card, .about-cta__card, .keyfact, .brand-card {
     transition: none;
   }
   .btn { min-height: 44px; }
