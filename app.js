@@ -379,7 +379,8 @@
     'Über mich erfahren': 'Learn about me',
     // Vorteile
     'Vorteile der': 'Benefits of', 'Zusammenarbeit': 'working together',
-    'Als Auftraggeber (Unternehmen & Privatpersonen)': 'For Clients (Companies & Private Individuals)',
+    'Als Auftraggeber': 'For Clients',
+    '(Unternehmen & Privatpersonen)': '(Companies & Private Individuals)',
     'Zugang zu einem kuratierten Talent-Netzwerk': 'Access to a curated talent network',
     'Zuverlässige Planung & Durchführung': 'Reliable planning & delivery',
     'Ein Ansprechpartner für alles': 'One contact for everything',

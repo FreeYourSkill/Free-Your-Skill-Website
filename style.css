@@ -669,24 +669,42 @@ body[data-route="home"] .header { display: none; }
 .vorteile-card--teal h3 { color: var(--teal); }
 .vorteile-card--blue h3 { color: var(--blue-light); }
 
+/* Kleiner, nicht fetter Zusatz unter der Hauptueberschrift (z.B. "(Unternehmen & Privatpersonen)").
+   Auf allen Karten identisch reserviert (bei Karten ohne eigenen Zusatztext als
+   unsichtbarer Platzhalter --spacer), damit der Ueberschriften-Bereich gleich hoch
+   ist und die Listen ueberall auf gleicher Hoehe beginnen. */
+.vorteile-card__subtitle {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--white-dim);
+  white-space: nowrap;
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+}
+.vorteile-card__subtitle--spacer {
+  visibility: hidden;
+}
+
 .vorteile-card ul {
   list-style: none;
   margin-bottom: 2rem;
 }
 .vorteile-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
   padding: 0.5rem 0;
-  padding-left: 1.5rem;
-  position: relative;
   color: var(--white-dim);
   font-size: 0.95rem;
   border-bottom: 1px solid rgba(255,255,255,0.04);
 }
 .vorteile-card li::before {
   content: '';
-  position: absolute;
-  left: 0; top: 50%;
-  transform: translateY(-50%);
+  flex-shrink: 0;
   width: 6px; height: 6px;
+  margin-top: 0.55em;
   border-radius: 50%;
 }
 .vorteile-card--pink li::before { background: var(--pink); }
