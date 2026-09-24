@@ -398,14 +398,15 @@
     'Eine Agentur für kreative Verbindungen, mit klarer Kommunikation und verlässlicher Umsetzung. Ich bringe Talente, Dienstleister, Auftraggebende und Projekte zusammen: fair, professionell und auf Augenhöhe.':
       'An agency for creative connections, with clear communication and reliable execution. I bring talents, service providers, clients and projects together: fair, professional and on equal footing.',
     'Eventplanung': 'Event Planning',
-    'Von Konzept bis Durchführung, live und digital: Firmen-Events, Messen, Festivals, Community-Events und Workshops. Ich plane und realisiere Events, die wirken.':
-      'From concept to delivery, live and digital: corporate events, trade fairs, festivals, community events and workshops. I plan and deliver events that work.',
+    'Dein Event, von der ersten Idee bis zur Umsetzung, aus einer Hand.':
+      'Your event, from the first idea to execution, all from one source.',
     'Vermittlung': 'Booking & Placement',
-    'Ich verbinde dich mit den richtigen Leuten: Artists aus Tanz, Musik und Moderation, dazu Creator, Dienstleister und Fachkräfte etwa für Foto, Video, Technik oder Web. Passend, fair und auf Augenhöhe.':
-      'I connect you with the right people: artists in dance, music and hosting, plus creators, service providers and specialists for photo, video, tech or web, for example. A good fit, fair and on equal footing.',
+    'Die richtigen Leute für dein Projekt, Artists wie Dienstleister.':
+      'The right people for your project, artists and service providers alike.',
     'Projekt-Support': 'Project Support',
-    'Projektassistenz und Beratung, Content-, Video- und Fotoproduktion, Livestreaming: ich manage und begleite dein Projekt von A bis Z, auch nach dem Event.':
-      'Project assistance and consulting, content, video and photo production, livestreaming: I manage and support your project from A to Z, even after the event.',
+    'Deine rechte Hand, wenn dir Zeit oder Struktur fehlt.':
+      'Your right hand when you’re short on time or structure.',
+    'Mehr erfahren': 'Learn more',
     'Über mich erfahren': 'Learn about me',
     // Vorteile
     'Vorteile der': 'Benefits of', 'Zusammenarbeit': 'working together',
@@ -524,25 +525,27 @@
     'Nachricht': 'Message', 'Abschicken': 'Send',
     'Öffnet dein E-Mail-Programm mit vorausgefüllter Nachricht.': 'Opens your email app with a pre-filled message.',
     // Vermittlung (Unterseite /agency/vermittlung/)
-    'Kein Booking-Automat. Ein Ansprechpartner, der von der ersten Idee bis nach dem Projekt an deiner Seite bleibt.':
-      'No booking machine. One contact who stays by your side from the first idea to after the project.',
     'VERMITTLUNG': 'PLACEMENT',
     'Die richtigen Leute für dein': 'The right people for your',
     'Projekt': 'project',
     'kreativ wie geschäftlich': 'creative and commercial',
-    'Du brauchst jemanden, der wirklich passt, nicht den erstbesten Treffer!':
-      'You need someone who really fits, not the first match you find!',
-    'Aus meinem kuratierten Netzwerk verbinde ich dich mit Artists genauso wie mit Dienstleistern und Fachkräften,':
-      'From my curated network I connect you with artists as well as service providers and specialists,',
-    'fair und auf Augenhöhe.': 'fair and on equal footing.',
+    'Du suchst wen, der wirklich passt, nicht den Erstbesten?':
+      'Looking for someone who really fits, not just the first option?',
+    'Aus meinem Netzwerk bring ich dich mit den richtigen Leuten zusammen, Artists wie Dienstleister, fair und auf Augenhöhe.':
+      'From my network I connect you with the right people, artists and service providers alike, fair and on equal footing.',
     'Für': 'For', 'wen': 'whom',
     'Unternehmen und Privatpersonen, die verlässliche Leute suchen. Artists und Dienstleister, die an gute Projekte wollen.':
       'Companies and private individuals looking for reliable people. Artists and service providers who want to get on good projects.',
     'Was du': 'What you', 'davon hast': 'get',
-    'Passgenaue Auswahl statt endloser Suche': 'A tailored selection instead of an endless search',
-    'Faire, offen kommunizierte Konditionen': 'Fair, openly communicated terms',
-    'Schriftliche Absprachen und klare Rollen von Anfang an': 'Written agreements and clear roles from the start',
-    'Ein Netzwerk, das du sonst nicht auf Knopfdruck hättest': 'A network you wouldn’t otherwise have at the push of a button',
+    'Passende Auswahl aus meinem kuratierten Netzwerk': 'The right pick from my curated network',
+    'Artists genauso wie Dienstleister und Fachkräfte': 'Artists as well as service providers and specialists',
+    'Konditionen offen abgestimmt': 'Terms agreed openly',
+    'Schriftliche Absprachen und klare Rollen': 'Written arrangements and clear roles',
+    'Am Ball, bis die Zusammenarbeit steht': 'Staying on it until the collaboration is set',
+    'Du sparst dir die endlose Suche': 'You skip the endless search',
+    'Du weißt immer, woran du bist': 'You always know where you stand',
+    'Zugriff auf ein Netzwerk, das du sonst nicht hast': 'Access to a network you wouldn’t otherwise have',
+    'Fair für beide Seiten': 'Fair for both sides',
     'Sag mir, wen oder was du brauchst': 'Tell me who or what you need.',
     // Gemeinsame Ueberschrift der Leistungs-Unterseiten ("Für wen?" / "Was du davon hast" s. o.)
     'Das ist': 'What’s', 'enthalten': 'included',

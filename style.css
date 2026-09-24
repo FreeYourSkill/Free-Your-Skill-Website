@@ -571,7 +571,9 @@ body[data-route="home"] .header { display: none; }
   margin-top: 4rem;
 }
 .usp {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   padding: 2.5rem 1.5rem;
   background: var(--black-card);
@@ -579,8 +581,8 @@ body[data-route="home"] .header { display: none; }
   transition: border-color 0.4s, transform 0.4s var(--ease-out), background 0.4s;
 }
 /* Dezenter Hover fuer alle drei Teaser-Kacheln: bestehende Bewegung plus
-   zarter Pink-Rand und ein sehr blasser Rosa-Ton. Verlinkt ist vorerst nur
-   die Vermittlungs-Kachel (.usp--link). */
+   zarter Pink-Rand und ein sehr blasser Rosa-Ton. Alle drei Kacheln verlinken
+   auf ihre Unterseite (.usp--link). */
 .usp:hover {
   border-color: rgba(254, 158, 195, 0.55);
   background:
@@ -611,6 +613,14 @@ body[data-route="home"] .header { display: none; }
   font-size: 0.95rem;
   color: var(--white-dim);
   line-height: 1.6;
+}
+/* "Mehr erfahren" (optischer Button, die ganze Kachel ist der Link):
+   unten buendig, reagiert auf den Kachel-Hover. */
+.usp__text { margin-bottom: 1.75rem; }
+.usp__more { margin-top: auto; }
+.usp:hover .usp__more {
+  border-color: var(--pink);
+  color: var(--pink);
 }
 
 /* ============================================
