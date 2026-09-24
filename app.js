@@ -6,13 +6,15 @@
 (() => {
   'use strict';
 
-  const VIEWS = ['home', 'agency', 'vermittlung', 'about', 'tournament', 'impressum', 'datenschutz'];
+  const VIEWS = ['home', 'agency', 'vermittlung', 'eventplanung', 'projektsupport', 'about', 'tournament', 'impressum', 'datenschutz'];
 
   // Saubere URLs pro View (Multipage-Build). Auch fuer die Hash-Umleitung genutzt.
   const ROUTE_URLS = {
     home: '/',
     agency: '/agency/',
     vermittlung: '/agency/vermittlung/',
+    eventplanung: '/agency/eventplanung/',
+    projektsupport: '/agency/projekt-support/',
     about: '/about/',
     tournament: '/tournament/',
     impressum: '/impressum/',
@@ -29,6 +31,8 @@
       home: 'Free Your Skill — Verbinden, Planen, Supporten aus Hamburg',
       agency: 'Agency — Verbinden, Planen, Supporten | Free Your Skill Hamburg',
       vermittlung: 'Vermittlung — die richtigen Leute für dein Projekt | Free Your Skill',
+      eventplanung: 'Eventplanung — Idee rein, Event raus | Free Your Skill Hamburg',
+      projektsupport: 'Projekt-Support — Projektassistenz und Unterstützung | Free Your Skill',
       about: 'Über uns — Free Your Skill Agency Hamburg',
       tournament: 'Tournament (Coming soon) — Free Your Skill',
       impressum: 'Impressum — Free Your Skill',
@@ -38,6 +42,8 @@
       home: 'Free Your Skill — Connect, Plan, Support from Hamburg',
       agency: 'Agency — Connect, Plan, Support | Free Your Skill Hamburg',
       vermittlung: 'Placement — the right people for your project | Free Your Skill',
+      eventplanung: 'Event Planning — idea in, event out | Free Your Skill Hamburg',
+      projektsupport: 'Project Support — project assistance and support | Free Your Skill',
       about: 'About — Free Your Skill Agency Hamburg',
       tournament: 'Tournament (Coming soon) — Free Your Skill',
       impressum: 'Imprint — Free Your Skill',
@@ -50,6 +56,8 @@
       home: 'Free Your Skill aus Hamburg: Ich verbinde Kreative und Auftraggeber und begleite Projekte, bis sie stehen. Aus der Szene, für die Szene. Fair und transparent.',
       agency: 'Eventplanung, Vermittlung und Projekt-Support aus einer Hand. Die Agentur aus der Szene in Hamburg, deutschlandweit tätig. Fair, transparent, ohne Vertragsbindung.',
       vermittlung: 'Vermittlung aus einer Hand: Ich verbinde dich mit den richtigen Artists, Dienstleistern und Fachkräften. Fair, auf Augenhöhe, mit klaren Absprachen. Aus Hamburg, deutschlandweit.',
+      eventplanung: 'Eventplanung aus einer Hand: von Idee und Konzept über Location, Technik und Artists bis zur Umsetzung vor Ort. Für Unternehmen, Agenturen, Kollektive und Privatpersonen. Aus Hamburg, deutschlandweit.',
+      projektsupport: 'Projekt-Support und Projektassistenz: Struktur, Organisation und Unterstützung vor, während und nach deinem Projekt. Deine rechte Hand aus der Szene. Aus Hamburg, deutschlandweit.',
       about: 'Free Your Skill — gegründet von Philipp Müller. Artist, Sales- und Eventmanager mit über 15 Jahren in der Kreativszene. Aus Hamburg, deutschlandweit tätig.',
       tournament: 'Das Free Your Skill Tournament ist in Vorbereitung. Alle Stile, jedes Level. Bald geht es los.',
       impressum: 'Impressum der Free Your Skill Agency, Philipp Müller, Hamburg.',
@@ -59,6 +67,8 @@
       home: 'Free Your Skill from Hamburg: I connect creatives and clients and see projects through until they’re done. From the scene, for the scene. Fair and transparent.',
       agency: 'Event planning, booking and project support from a single source. The agency from within the scene in Hamburg, active nationwide. Fair, transparent, no lock-in.',
       vermittlung: 'Placement from a single source: I connect you with the right artists, service providers and specialists. Fair, on equal footing, with clear agreements. From Hamburg, nationwide.',
+      eventplanung: 'Event planning from a single source: from idea and concept to location, tech and artists all the way to execution on site. For companies, agencies, collectives and private individuals. From Hamburg, nationwide.',
+      projektsupport: 'Project support and project assistance: structure, organization and support before, during and after your project. Your right hand from the scene. From Hamburg, nationwide.',
       about: 'Free Your Skill — founded by Philipp Müller. Artist, sales and event manager with over 15 years in the creative scene. From Hamburg, active nationwide.',
       tournament: 'The Free Your Skill Tournament is in preparation. All styles, every level. Coming soon.',
       impressum: 'Imprint of Free Your Skill Agency, Philipp Müller, Hamburg.',
@@ -528,12 +538,55 @@
     'Für': 'For', 'wen': 'whom',
     'Unternehmen und Privatpersonen, die verlässliche Leute suchen. Artists und Dienstleister, die an gute Projekte wollen.':
       'Companies and private individuals looking for reliable people. Artists and service providers who want to get on good projects.',
-    'Was du': 'What’s', 'davon hast': 'in it for you',
+    'Was du': 'What you', 'davon hast': 'get',
     'Passgenaue Auswahl statt endloser Suche': 'A tailored selection instead of an endless search',
     'Faire, offen kommunizierte Konditionen': 'Fair, openly communicated terms',
     'Schriftliche Absprachen und klare Rollen von Anfang an': 'Written agreements and clear roles from the start',
     'Ein Netzwerk, das du sonst nicht auf Knopfdruck hättest': 'A network you wouldn’t otherwise have at the push of a button',
     'Sag mir, wen oder was du brauchst': 'Tell me who or what you need.',
+    // Gemeinsame Ueberschrift der Leistungs-Unterseiten ("Für wen?" / "Was du davon hast" s. o.)
+    'Das ist': 'What’s', 'enthalten': 'included',
+    // Eventplanung (Unterseite /agency/eventplanung/)
+    'EVENTPLANUNG': 'EVENT PLANNING',
+    'Idee rein, Event': 'Idea in, event', 'raus': 'out',
+    'Alles aus einer Hand': 'Everything from one source',
+    'Bock auf ein Event, aber null auf den Orga-Kram? Kenn ich.': 'Up for an event but not the organizing hassle? I get it.',
+    'Bring die Idee mit, um den Rest kümmern wir uns, von der Planung bis zur letzten Zugabe.':
+      'Bring the idea, we’ll take care of the rest, from planning to the final encore.',
+    'Für Unternehmen, Agenturen, Kollektive und Privatpersonen, die ein Event auf die Beine stellen wollen, ob klein oder groß.':
+      'For companies, agencies, collectives and private individuals who want to put on an event, big or small.',
+    'Idee und Konzept, zusammen ausgetüftelt': 'Idea and concept, worked out together',
+    'Ablauf, Zeitplan und Budget im Griff': 'Schedule, timeline and budget under control',
+    'Location, Technik und Dienstleister organisiert': 'Location, tech and service providers organized',
+    'Passende Artists und Fachkräfte gebucht, auch für Foto, Video oder Promo':
+      'The right artists and specialists booked, including photo, video and promo',
+    'Vor Ort der Kopf, der alles zusammenhält, von Aufbau bis Abbau':
+      'On site as the head that holds it all together, from setup to teardown',
+    'Ein Event mit deiner Handschrift': 'An event with your signature',
+    'Kreative Ideen und eine Umsetzung, die hält': 'Creative ideas and an execution that holds up',
+    'Ein Ansprechpartner statt zehn Baustellen': 'One point of contact instead of ten building sites',
+    'Egal ob einzelnes Event oder ganze Reihe': 'Whether a single event or a whole series',
+    'Lass was auf die Beine stellen': 'Let’s make something happen',
+    // Projekt-Support (Unterseite /agency/projekt-support/)
+    'PROJEKT-SUPPORT': 'PROJECT SUPPORT',
+    'Du kümmerst dich ums Wesentliche, ich um den': 'You focus on what matters, I handle the', 'Rest': 'rest',
+    'Projektassistenz und Unterstützung, vor, während und nach deinem Projekt':
+      'Project assistance and support, before, during and after your project',
+    'Zu viel auf einmal? Ich nehm dir was ab.': 'Too much at once? I’ll take some off your plate.',
+    'Als deine rechte Hand bring ich Struktur rein, koordinier und pack da mit an, wo du Entlastung brauchst.':
+      'As your right hand I bring in structure, coordinate and pitch in wherever you need relief.',
+    'Für Kreative, Artists, Kollektive und Unternehmen, die bei ihrem Projekt ein Paar Hände mehr gebrauchen können.':
+      'For creatives, artists, collectives and companies who could use an extra pair of hands on their project.',
+    'Struktur, Zeitplan und Überblick': 'Structure, timeline and overview',
+    'Organisation und Abstimmung mit allen Beteiligten': 'Organizing and coordinating with everyone involved',
+    'Mit anpacken bei der Umsetzung, als zweites Paar Hände': 'Pitching in on the execution, as a second pair of hands',
+    'Troubleshooting, wenn es mal hakt': 'Troubleshooting when things get stuck',
+    'Sparring, wenn du eine ehrliche zweite Meinung brauchst': 'Sparring when you need an honest second opinion',
+    'Mehr Zeit, weil dir jemand den Rücken freihält': 'More time, because someone has your back',
+    'Klarer Kopf statt Chaos': 'A clear head instead of chaos',
+    'So viel Unterstützung wie du brauchst, nicht mehr': 'As much support as you need, no more',
+    'Über 15 Jahre Szene-Erfahrung an deiner Seite': 'Over 15 years of scene experience by your side',
+    'Hol dir Verstärkung': 'Get some backup',
     // About
     'Über Free Your Skill — die Agentur aus Hamburg': 'About Free Your Skill — the agency from Hamburg',
     '„Die besten Sachen entstehen, wenn die richtigen': '„The best things happen when the right',

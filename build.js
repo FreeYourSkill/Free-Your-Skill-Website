@@ -26,6 +26,8 @@ const ROUTES = [
   { view: 'home',        url: '/',                     out: 'index.html' },
   { view: 'agency',      url: '/agency/',              out: path.join('agency', 'index.html') },
   { view: 'vermittlung', url: '/agency/vermittlung/',  out: path.join('agency', 'vermittlung', 'index.html') },
+  { view: 'eventplanung',   url: '/agency/eventplanung/',    out: path.join('agency', 'eventplanung', 'index.html') },
+  { view: 'projektsupport', url: '/agency/projekt-support/', out: path.join('agency', 'projekt-support', 'index.html') },
   { view: 'about',       url: '/about/',               out: path.join('about', 'index.html') },
   { view: 'tournament',  url: '/tournament/',          out: path.join('tournament', 'index.html') },
   { view: 'impressum',   url: '/impressum/',           out: path.join('impressum', 'index.html') },
